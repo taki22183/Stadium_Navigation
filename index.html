@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>スタジアム アクセス</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="J1.js"></script>
+</head>
+
+<body>
+    <h2>スタジアム・ナビゲーション</h2>
+
+    <div id="Sports">
+        <ul>
+            Jリーグ
+            <li><a href="#J1" onclick="J1_show()">J1リーグ</a></li>
+            <li><a href="#">J2リーグ</a></li>
+            <li><a href="#">J3リーグ</a></li>
+        </ul>
+
+        <ul>
+            WEリーグ
+            <li><a href="#">WEリーグ</a></li>
+        </ul>
+
+        <ul>
+            日本プロ野球
+            <li><a href="#">セ・リーグ</a></li>
+            <li><a href="#">パ・リーグ</a></li>
+        </ul>
+
+        <ul>
+            Bリーグ
+            <li><a href="#">B1</a></li>
+            <li><a href="#">B2</a></li>
+        </ul>
+    </div>
+
+    <div class="J1" style=display:none;>
+        <h3>J1リーグ</h3>
+        <li><a href="#sapporo" onclick="sapporo()">北海道コンサドーレ札幌</a></li>
+        <li><a href="#kashima" onclick="kashima()">鹿島アントラーズ</a></li>
+        <li><a href="#urawa" onclick="urawa()">浦和レッズ</a></li>
+        <li><a href="#kashiwa" onclick="kashiwa()">柏レイソル</a></li>
+        <li><a href="#fctokyo" onclick="fctokyo()">FC東京</a></li>
+        <li><a href="#verdy" onclick="verdy()">東京ヴェルディ</a></li>
+        <li><a href="#machida" onclick="machida()">FC町田ゼルビア</a></li>
+        <li><a href="#kawasaki" onclick="kawasaki()">川崎フロンターレ</a></li>
+        <li><a href="#marinos" onclick="marinos()">横浜F・マリノス</a></li>
+        <li><a href="#shonan" onclick="shonan()">湘南ベルマーレ</a></li>
+        <li><a href="#niigata" onclick="niigata()">アルビレックス新潟</a></li>
+        <li><a href="#iwata" onclick="iwata()">ジュビロ磐田</a></li>
+        <li><a href="#nagoya" onclick="nagoya()">名古屋グランパス</a></li>
+        <li><a href="#kyoto" onclick="kyoto()">京都サンガF.C.</a></li>
+        <li><a href="#gamba" onclick="gamba()">ガンバ大阪</a></li>
+        <li><a href="#cerezo" onclick="cerezo()">セレッソ大阪</a></li>
+        <li><a href="#kobe" onclick="kobe()">ヴィッセル神戸</a></li>
+        <li><a href="#hiroshima" onclick="hiroshima()">サンフレッチェ広島</a></li>
+        <li><a href="#fukuoka" onclick="fukuoka()">アビスパ福岡</a></li>
+        <li><a href="#tosu" onclick="tosu()">サガン鳥栖</a></li>
+    </div>
+
+    <div class="J1_info">
+        <div id="sapporo" style=display:none;>
+            <h4>北海道コンサドーレ札幌</h4>
+            <p>大和ハウス プレミストドーム</p>
+            <p>札幌厚別公園陸上競技場</p>
+            <a href="https://www.jleague-ticket.jp/club/cs/" target="_blank">チケコン(Jリーグチケット)</a>
+        </div>
+
+        <div id="kashima" style=display:none;>
+            <h4>鹿島アントラーズ</h4>
+            <p>県立カシマサッカースタジアム</p>
+            <a href="https://www.jleague-ticket.jp/club/ka/" target="_blank">鹿チケ(Jリーグチケット)</a>
+        </div>
+
+        <div id="urawa" style=display:none;>
+            <h4>浦和レッズ</h4>
+            <p>埼玉スタジアム2002</p>
+            <p>浦和駒場スタジアム</p>
+            <a href="https://www.jleague-ticket.jp/club/ur/" target="_blank">Jリーグチケット</a><br>
+            <a href="https://rex-ticket.jp/" target="_blank">REX TICKET</a>
+        </div>
+
+        <div id="kashiwa" style=display:none;>
+            <h4>柏レイソル</h4>
+            <p>三協フロンテア柏スタジ</li>アム</p>
+            <a href="https://www.jleague-ticket.jp/club/kr/" target="_blank">Jリーグチケット</a><br>
+            <a href="https://l-tike.com/sports/mevent/?mid=197343" target="_blank">ローソンチケット</a>
+        </div>
+
+        <div id="fctokyo" style=display:none;>
+            <h4>FC東京</h4>
+            <p>味の素スタジアム</p>
+            <a href="https://www.jleague-ticket.jp/club/to/" target="_blank">Jリーグチケット</a>
+        </div>
+
+        <div id="verdy" style=display:none;>
+            <h4>東京ヴェルディ</h4>
+            <p>味の素スタジアム</p>
+            <a href="https://www.jleague-ticket.jp/club/vn/" target="_blank">ヴェルディチケット(Jリーグチケット)</a>
+        </div>
+
+        <div id="machida" style=display:none;>
+            <h4>FC町田ゼルビア</h4>
+            <p>町田GIONスタジアム</p>
+            <a href="https://www.jleague-ticket.jp/club/mz/" target="_blank">ゼルビアチケット(Jリーグチケット)</a>
+        </div>
+
+        <div id="kawasaki" style=display:none;>
+            <h4>川崎フロンターレ</h4>
+            <p>Uvanceとどろきスタジアム by Fujitsu</p>
+            <a href="https://www.jleague-ticket.jp/club/kf/" target="_blank">チケフロ(Jリーグチケット)</a>
+        </div>
+
+        <div id="marinos" style=display:none;>
+            <h4>横浜F・マリノス</h4>
+            <p>日産スタジアム</p>
+            <p>ニッパツ三ツ沢競技場</p>
+            <a href="https://www.jleague-ticket.jp/club/ym/" target="_blank">チケットF・マリノス(Jリーグチケット)</a>
+        </div>
+
+        <div id="shonan" style=display:none;>
+            <h4>湘南ベルマーレ</h4>
+            <p>レモンガススタジアム平塚</p>
+            <a href="https://www.jleague-ticket.jp/club/bm/" target="_blank">ベルチケ(Jリーグチケット)</a>
+        </div>
+
+        <div id="niigata" style=display:none;>
+            <h4>アルビレックス新潟</h4>
+            <p>デンカビックスワンスタジアム</p>
+            <a href="https://www.jleague-ticket.jp/club/an/" target="_blank">Jリーグチケット</a>
+        </div>
+
+        <div id="iwata" style=display:none;>
+            <h4>ジュビロ磐田</h4>
+            <p>ヤマハスタジアム(磐田)</p>
+            <p>エコパスタジアム</p>
+            <a href="https://www.jleague-ticket.jp/club/ju/" target="_blank">Jubi ticke+(Jリーグチケット)</a>
+        </div>
+
+        <div id="nagoya" style=display:none;>
+            <h4>名古屋グランパス</h4>
+            <p>豊田スタジアム</p>
+            <p>パロマ瑞穂スタジアム(建て替え工事中)</p>
+            <a href="https://www.jleague-ticket.jp/club/ng/" target="_blank">グランパスチケットストア(Jリーグチケット)</a>
+        </div>
+
+        <div id="kyoto" style=display:none;>
+            <h4>京都サンガF.C.</h4>
+            <p>サンガスタジアム by KYOCERA</p>
+            <a href="https://www.jleague-ticket.jp/club/ks/" target="_blank">オフィシャルチケットサイト(Jリーグチケット)</a>
+        </div>
+
+        <div id="gamba" style=display:none;>
+            <h4>ガンバ大阪</h4>
+            <p>パナソニック スタジアム 吹田</p>
+            <a href="https://www.jleague-ticket.jp/club/go/" target="_blank">Jリーグチケット</a>
+
+        </div>
+
+        <div id="cerezo" style=display:none;>
+            <h4>セレッソ大阪</h4>
+            <p>ヨドコウ桜スタジアム</p>
+            <a href="https://www.jleague-ticket.jp/club/co/" target="_blank">セレチケ(Jリーグチケット)</a>
+        </div>
+
+        <div id="kobe" style=display:none;>
+            <h4>ヴィッセル神戸</h4>
+            <p>ノエビアスタジアム神戸</p>
+            <a href="https://vissel.tstar.jp/" target="_blank">楽天チケット</a><br>
+            <a href="https://www.jleague-ticket.jp/club/vi/" target="_blank">Jリーグチケット</a>
+        </div>
+
+        <div id="hiroshima" style=display:none;>
+            <h4>サンフレッチェ広島</h4>
+            <p>エディオンピースウイング広島</p>
+            <a href="https://ticket.sanfrecce.co.jp/" target="_blank">サンフレチケット</a>
+        </div>
+
+        <div id="fukuoka" style=display:none;>
+            <h4>アビスパ福岡</h4>
+            <p>ベスト電器スタジアム</p>
+            <a href="https://www.jleague-ticket.jp/club/af/" target="_blank">Jリーグチケット</a>
+        </div>
+
+        <div id="tosu" style=display:none;>
+            <h4>サガン鳥栖</h4>
+            <p>駅前不動産スタジアム</p>
+            <a href="https://www.jleague-ticket.jp/club/st/" target="_blank">Jリーグチケット</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
