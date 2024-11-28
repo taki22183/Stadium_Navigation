@@ -1,4 +1,16 @@
+/* h2の要素 */
 h2 {
-    color: black;
-    text-align: center;
+	text-align: center;
+	color: black;
+}
+
+/* 地図 */
+iframe {
+	position: absolute;
+	top: 100px;
+	right: 50px;
+}
+
+.Invisible {
+	display: none;
 }
