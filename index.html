@@ -6,6 +6,7 @@
 	<title>スタジアム アクセス</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+	<script src="system.js"></script>
 	<script src="J1.js"></script>
 </head>
 
@@ -38,6 +39,13 @@
 		</ul>
 	</div>
 
+	<span id="input_Location" class="Invisible">
+		<input type="text" id="Location" placeholder="出発地">
+		<input type="button" value="検索" onclick="input()">
+	</span>
+
+	<ul id="List"></ul>
+
 	<div id="J1" class="Invisible">
 		<h3>J1リーグ</h3>
 		<li><a href="#HokkaidoConsadoleSapporo" onclick="HokkaidoConsadoleSapporo()">北海道コンサドーレ札幌</a></li>
@@ -53,7 +61,7 @@
 		<li><a href="#AlbirexNiigata" onclick="AlbirexNiigata()">アルビレックス新潟</a></li>
 		<li><a href="#JubiroIwata" onclick="JubiroIwata()">ジュビロ磐田</a></li>
 		<li><a href="#NagoyaGrampus" onclick="NagoyaGrampus()">名古屋グランパス</a></li>
-		<li><a href="#KyotoSangaF.C." onclick="KyotoSangaFC()">京都サンガF.C.</a></li>
+		<li><a href="#KyotoSangaFC" onclick="KyotoSangaFC()">京都サンガF.C.</a></li>
 		<li><a href="#GambaOsaka" onclick="GambaOsaka()">ガンバ大阪</a></li>
 		<li><a href="#CerezoOsaka" onclick="CerezoOsaka()">セレッソ大阪</a></li>
 		<li><a href="#VisselKobe" onclick="VisselKobe()">ヴィッセル神戸</a></li>
@@ -304,14 +312,14 @@
 		</div>
 
 		<!-- 京都サンガF.C. -->
-		<div id="KyotoSangaF.C." class="Invisible">
+		<div id="KyotoSangaFC" class="Invisible">
 			<h4>京都サンガF.C.</h4>
 			<p>サンガスタジアム by KYOCERA</p>
 			<a href="https://www.jleague-ticket.jp/club/ks/" target="_blank">オフィシャルチケットサイト(Jリーグチケット)</a>
 
 			<!-- サンガスタジアム by KYOCERA -->
 			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6535.160085028514!2d135.5822643752201!3d35.01721636616517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600055963a387205%3A0x939181e03c9e2bb6!2z44K144Oz44Ks44K544K_44K444Ki44OgIGJ5IEtZT0NFUkE!5e0!3m2!1sja!2sjp!4v1732768792764!5m2!1sja!2sjp"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6535.160085028514!2d135.5822643752201!3d35.01721636616517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600055963a387205%3A0x939181e03c9e2bb6!2z44K144Oz44Ks44K544K_44K444Ki44OgIGJ5IEtZT0NFUkE!5e0!3m2!1sja!2sjp!4v1733375704982!5m2!1sja!2sjp"
 				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 				referrerpolicy="no-referrer-when-downgrade">
 			</iframe>

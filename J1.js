@@ -1,197 +1,334 @@
+/* J1 */
 function J1_show() {
 	$("h2").css("background-color", "white").css("color", "black");
 	$("#J1").show();
 	$("#J1_info div").hide();
+	$("#input_Location").hide();
+	$("#List").hide();
 }
 
 /* 北海道コンサドーレ札幌 */
 function HokkaidoConsadoleSapporo() {
+	remove();
+
 	$("h2").css("background-color", "#CF0000").css("color", "black");
 	$("#J1").hide();
-	$("#J1_info #HokkaidoConsadoleSapporo").show();
-	$("#J1_info #HokkaidoConsadoleSapporo #SapporoDome").show();
+	$("#HokkaidoConsadoleSapporo").show();
+	$("#SapporoDome").show();
+	$("#input_Location").show();
+
+	$("#HokkaidoConsadoleSapporo p").addClass("selection");
+	$("#HokkaidoConsadoleSapporo p").eq(0).addClass("selected");
 }
 
 // 大和ハウス プレミストドーム
 function SapporoDome() {
-	$("#J1_info #HokkaidoConsadoleSapporo #SapporoDome").show();
-	$("#J1_info #HokkaidoConsadoleSapporo #SapporoAtsubetsu").hide();
+	$("#SapporoDome").show();
+	$("#SapporoAtsubetsu").hide();
+	$("#HokkaidoConsadoleSapporo p").eq(0).addClass("selected");
+	$("#HokkaidoConsadoleSapporo p").eq(1).removeClass("selected");
+	$("#List").hide();
 }
 
 // 札幌厚別公園陸上競技場
 function SapporoAtsubetsu() {
-	$("#J1_info #HokkaidoConsadoleSapporo #SapporoDome").hide();
-	$("#J1_info #HokkaidoConsadoleSapporo #SapporoAtsubetsu").show();
+	$("#SapporoDome").hide();
+	$("#SapporoAtsubetsu").show();
+	$("#HokkaidoConsadoleSapporo p").eq(0).removeClass("selected");
+	$("#HokkaidoConsadoleSapporo p").eq(1).addClass("selected");
+	$("#List").hide();
 }
 
 /* 鹿島アントラーズ */
 function KashimaAntlers() {
-	$("#J1").hide();
-	$("#J1_info #KashimaAntlers").show();
+	remove();
+
 	$("h2").css("background-color", "#B71840").css("color", "white");
+	$("#J1").hide();
+	$("#KashimaAntlers").show();
+	$("#input_Location").show();
+
+	$("#KashimaAntlers").addClass("selection");
 }
 
 /* 浦和レッズ */
 function UrawaReds() {
-	$("#J1").hide();
-	$("#J1_info #UrawaReds").show();
+	remove();
+
 	$("h2").css("background-color", "#E6002D").css("color", "black");
-	$("#J1_info #UrawaReds #SaitamaStadium2002").show();
+	$("#J1").hide();
+	$("#UrawaReds").show();
+	$("#SaitamaStadium2002").show();
+	$("#input_Location").show();
+
+	$("#UrawaReds").addClass("selection");
+	$("#UrawaReds p").eq(0).addClass("selected");
 }
 
 // 埼玉スタジアム2002
 function SaitamaStadium2002() {
-	$("#J1_info #UrawaReds #SaitamaStadium2002").show();
-	$("#J1_info #UrawaReds #UrawaKomabaStadium").hide();
+	$("#SaitamaStadium2002").show();
+	$("#UrawaKomabaStadium").hide();
+	$("#UrawaReds p").eq(0).addClass("selected");
+	$("#UrawaReds p").eq(1).removeClass("selected");
+	$("#List").hide();
 }
 
 // 浦和駒場スタジアム
 function UrawaKomabaStadium() {
-	$("#J1_info #UrawaReds #SaitamaStadium2002").hide();
-	$("#J1_info #UrawaReds #UrawaKomabaStadium").show();
+	$("#SaitamaStadium2002").hide();
+	$("#UrawaKomabaStadium").show();
+	$("#UrawaReds p").eq(0).removeClass("selected");
+	$("#UrawaReds p").eq(1).addClass("selected");
+	$("#List").hide();
 }
 
 /* 柏レイソル */
 function KashiwaReysol() {
-	$("#J1").hide();
-	$("#J1_info #KashiwaReysol").show();
+	remove();
+
 	$("h2").css("background-color", "#FFF100").css("color", "black");
+	$("#J1").hide();
+	$("#KashiwaReysol").show();
+	$("#input_Location").show();
+
+	$("#KashiwaReysol").addClass("selection");
 }
 
 /* FC東京 */
 function FCTokyo() {
-	$("#J1").hide();
-	$("#J1_info #FCTokyo").show();
+	remove();
+
 	$("h2").css("background-color", "#000A6E").css("color", "#FC0000");
+	$("#J1").hide();
+	$("#FCTokyo").show();
+	$("#input_Location").show();
+
+	$("#FCTokyo").addClass("selection");
 }
 
 /* 東京ヴェルディ */
 function TokyoVerdy() {
-	$("#J1").hide();
-	$("#J1_info #TokyoVerdy").show();
+	remove();
+
 	$("h2").css("background-color", "#046A38").css("color", "white");
+	$("#J1").hide();
+	$("#TokyoVerdy").show();
+	$("#input_Location").show();
+
+	$("#TokyoVerdy").addClass("selection");
 }
 
 /* FC町田ゼルビア */
 function FCMachidaZelvia() {
-	$("#J1").hide();
-	$("#J1_info #FCMachidaZelvia").show();
+	remove();
+
 	$("h2").css("background-color", "#05488B").css("color", "white");
+	$("#J1").hide();
+	$("#FCMachidaZelvia").show();
+	$("#input_Location").show();
+
+	$("#FCMachidaZelvia").addClass("selection");
 }
 
 /* 川崎フロンターレ */
 function KawasakiFrontale() {
-	$("#J1").hide();
-	$("#J1_info #KawasakiFrontale").show();
+	remove();
+
 	$("h2").css("background-color", "#23B9FE").css("color", "white");
+	$("#J1").hide();
+	$("#KawasakiFrontale").show();
+	$("#input_Location").show();
+
+	$("#KawasakiFrontale").addClass("selection");
 }
 
 /* 横浜F・マリノス */
 function YokohamaFMarinos() {
-	$("#J1").hide();
-	$("#J1_info #YokohamaF・Marinos").show();
+	remove();
+
 	$("h2").css("background-color", "#004098").css("color", "white");
-	$("#J1_info #YokohamaF・Marinos #NissanStadium").show();
+	$("#J1").hide();
+	$("#YokohamaF・Marinos").show();
+	$("#NissanStadium").show();
+	$("#input_Location").show();
+
+	$("#YokohamaF・Marinos").addClass("selection");
+	$("#YokohamaF・Marinos p").eq(0).addClass("selected");
 }
 
 // 日産スタジアム
 function NissanStadium() {
-	$("#J1_info #YokohamaF・Marinos #NissanStadium").show();
-	$("#J1_info #YokohamaF・Marinos #NippatsuMitsuzawa").hide();
+	$("#NissanStadium").show();
+	$("#NippatsuMitsuzawa").hide();
+	$("#YokohamaF・Marinos p").eq(0).addClass("selected");
+	$("#YokohamaF・Marinos p").eq(1).removeClass("selected");
+
+	$("#List").hide();
 }
 
 // ニッパツ三ッ沢球技場
 function NippatsuMitsuzawa() {
-	$("#J1_info #YokohamaF・Marinos #NissanStadium").hide();
-	$("#J1_info #YokohamaF・Marinos #NippatsuMitsuzawa").show();
+	$("#NissanStadium").hide();
+	$("#NippatsuMitsuzawa").show();
+	$("#YokohamaF・Marinos p").eq(0).removeClass("selected");
+	$("#YokohamaF・Marinos p").eq(1).addClass("selected");
+
+	$("#List").hide();
 }
 
 /* 湘南ベルマーレ */
 function ShonanBellmare() {
-	$("#J1").hide();
-	$("#J1_info #ShonanBellmare").show();
+	remove();
+
 	$("h2").css("background-color", "#60B424").css("color", "#005CA2");
+	$("#J1").hide();
+	$("#ShonanBellmare").show();
+	$("#input_Location").show();
+
+	$("#ShonanBellmare").addClass("selection");
 }
 
 /* アルビレックス新潟 */
 function AlbirexNiigata() {
-	$("#J1").hide();
-	$("#J1_info #AlbirexNiigata").show();
+	remove();
+
 	$("h2").css("background-color", "#FF6325").css("color", "#014099");
+	$("#J1").hide();
+	$("#AlbirexNiigata").show();
+	$("#input_Location").show();
+
+	$("#AlbirexNiigata").addClass("selection");
 }
 
 /* ジュビロ磐田 */
 function JubiroIwata() {
-	$("#J1").hide();
-	$("#J1_info #JubiroIwata").show();
+	remove();
+
 	$("h2").css("background-color", "#7399D1").css("color", "white");
-	$("#J1_info #JubiroIwata #YamahaStadium").show();
+	$("#J1").hide();
+	$("#JubiroIwata").show();
+	$("#YamahaStadium").show();
+	$("#input_Location").show();
+
+	$("#YokohamaF・Marinos").addClass("selection");
+	$("#JubiroIwata p").eq(0).addClass("selected");
 }
 
 // ヤマハスタジアム(磐田)
 function YamahaStadium() {
-	$("#J1_info #JubiroIwata #YamahaStadium").show();
-	$("#J1_info #JubiroIwata #EkopaStadium").hide();
+	$("#YamahaStadium").show();
+	$("#EkopaStadium").hide();
+	$("#JubiroIwata p").eq(0).addClass("selected");
+	$("#JubiroIwata p").eq(1).removeClass("selected");
+
+	$("#List").hide();
 }
 
 // エコパスタジアム
 function EkopaStadium() {
-	$("#J1_info #JubiroIwata #YamahaStadium").hide();
-	$("#J1_info #JubiroIwata #EkopaStadium").show();
+	remove();
+
+	$("#YamahaStadium").hide();
+	$("#EkopaStadium").show();
+	$("#JubiroIwata p").eq(0).removeClass("selected");
+	$("#JubiroIwata p").eq(1).addClass("selected");
+
+	$("#List").hide();
 }
 
 /* 名古屋グランパス */
 function NagoyaGrampus() {
-	$("#J1").hide();
-	$("#J1_info #NagoyaGrampus").show();
+	remove();
+
 	$("h2").css("background-color", "#D70C18").css("color", "#F8B500");
+	$("#J1").hide();
+	$("#NagoyaGrampus").show();
+	$("#input_Location").show();
+
+	$("#NagoyaGrampus").addClass("selection");
 }
 
 /* 京都サンガF.C. */
 function KyotoSangaFC() {
-	$("#J1").hide();
-	$("#J1_info #KyotoSangaF\\.C\\.").show();
+	remove();
+
 	$("h2").css("background-color", "#6F0467").css("color", "white");
+	$("#J1").hide();
+	$("#KyotoSangaFC").show();
+	$("#input_Location").show();
+
+	$("#KyotoSangaFC").addClass("selection");
 }
 
 /* ガンバ大阪 */
 function GambaOsaka() {
-	$("#J1").hide();
-	$("#J1_info #GambaOsaka").show();
+	remove();
+
 	$("h2").css("background-color", "#003287").css("color", "white");
+	$("#J1").hide();
+	$("#GambaOsaka").show();
+	$("#input_Location").show();
+
+	$("#GambaOsaka").addClass("selection");
 }
 
 /* セレッソ大阪 */
 function CerezoOsaka() {
-	$("#J1").hide();
-	$("#J1_info #CerezoOsaka").show();
+	remove();
+
 	$("h2").css("background-color", "#DA005C").css("color", "#1E2380");
+	$("#J1").hide();
+	$("#CerezoOsaka").show();
+	$("#input_Location").show();
+
+	$("#CerezoOsaka").addClass("selection");
 }
 
 /* ヴィッセル神戸 */
 function VisselKobe() {
-	$("#J1").hide();
-	$("#J1_info #VisselKobe").show();
+	remove();
+
 	$("h2").css("background-color", "#980323").css("color", "white");
+	$("#J1").hide();
+	$("#VisselKobe").show();
+	$("#input_Location").show();
+
+	$("#VisselKobe").addClass("selection");
 }
 
 /* サンフレッチェ広島 */
 function SanfrecceHiroshima() {
-	$("#J1").hide();
-	$("#J1_info #SanfrecceHiroshima").show();
+	remove();
+
 	$("h2").css("background-color", "#51318F").css("color", "white");
+	$("#J1").hide();
+	$("#SanfrecceHiroshima").show();
+	$("#input_Location").show();
+
+	$("#SanfrecceHiroshima").addClass("selection");
 }
 
 /* アビスパ福岡 */
 function AvispaFukuoka() {
-	$("#J1").hide();
-	$("#J1_info #AvispaFukuoka").show();
+	remove();
+
 	$("h2").css("background-color", "#00205B").css("color", "white");
+	$("#J1").hide();
+	$("#AvispaFukuoka").show();
+	$("#input_Location").show();
+
+	$("#AvispaFukuoka").addClass("selection");
 }
 
 /* サガン鳥栖 */
 function SaganTosu() {
-	$("#J1").hide();
-	$("#J1_info #SaganTosu").show();
+	remove();
+
 	$("h2").css("background-color", "#2196F3").css("color", "#E95599");
+	$("#J1").hide();
+	$("#SaganTosu").show();
+	$("#input_Location").show();
+
+	$("#SaganTosu").addClass("selection");
 }
