@@ -2,34 +2,27 @@
 function input() {
 	var Location = $("#Location").val();
 
-	var stadium = set_stadium_name();
+	var Stadium = Stadium_Name();
 
 	if (Location == "")
 		Location = "現在地";
 
-	$("#List").html('<a href="https://maps.google.com/maps?saddr=' + Location + '&daddr=' + stadium + '&dirflg=r" target="_blank">' + '公共交通機関</a></li>'
-		+ '<br><a href="https://maps.google.com/maps?saddr=' + Location + '&daddr=' + stadium + '&dirflg=d" target="_blank"> ' + '車</a></li>');
+	$("#Route").html('<a href="https://maps.google.com/maps?saddr=' + Location + '&daddr=' + Stadium + '&dirflg=r" target="_blank">' + '公共交通機関</a></li>'
+		+ '<br><a href="https://maps.google.com/maps?saddr=' + Location + '&daddr=' + Stadium + '&dirflg=d" target="_blank"> ' + '車</a></li>');
 
-	$("#List").show();
-}
-
-/* スタジアム名を設定 */
-function set_stadium_name() {
-	var stadium = get_stadium_name();
-
-	return stadium;
+	$("#Route").show();
 }
 
 /* スタジアム名を取得 */
-function get_stadium_name() {
-	var clubname = $(".selection").attr("id");
+function Stadium_Name() {
+	var Clubname = $(".selection").attr("id");
 
-	if ($('.selected').length)
-		var stadium = $("p.selected").text();
+	if ($(".selected").length)
+		var Stadium = $("p.selected").text();
 	else
-		var stadium = $("#" + clubname + " p").text();
+		var Stadium = $("#" + Clubname + " p").text();
 
-	return stadium;
+	return Stadium;
 }
 
 /* 削除 */
@@ -37,5 +30,5 @@ function remove() {
 	$(".selection").removeClass("selection");
 	$(".selected").removeClass("selected");
 	$("#Location").val("");
-	$("#List").hide();
+	$("#Route").hide();
 }

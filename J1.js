@@ -4,7 +4,7 @@ function J1_show() {
 	$("#J1").show();
 	$("#J1_info div").hide();
 	$("#input_Location").hide();
-	$("#List").hide();
+	$("#Route").hide();
 }
 
 /* 北海道コンサドーレ札幌 */
@@ -17,7 +17,7 @@ function HokkaidoConsadoleSapporo() {
 	$("#SapporoDome").show();
 	$("#input_Location").show();
 
-	$("#HokkaidoConsadoleSapporo p").addClass("selection");
+	$("#HokkaidoConsadoleSapporo").addClass("selection");
 	$("#HokkaidoConsadoleSapporo p").eq(0).addClass("selected");
 }
 
@@ -27,7 +27,7 @@ function SapporoDome() {
 	$("#SapporoAtsubetsu").hide();
 	$("#HokkaidoConsadoleSapporo p").eq(0).addClass("selected");
 	$("#HokkaidoConsadoleSapporo p").eq(1).removeClass("selected");
-	$("#List").hide();
+	$("#Route").hide();
 }
 
 // 札幌厚別公園陸上競技場
@@ -36,7 +36,7 @@ function SapporoAtsubetsu() {
 	$("#SapporoAtsubetsu").show();
 	$("#HokkaidoConsadoleSapporo p").eq(0).removeClass("selected");
 	$("#HokkaidoConsadoleSapporo p").eq(1).addClass("selected");
-	$("#List").hide();
+	$("#Route").hide();
 }
 
 /* 鹿島アントラーズ */
@@ -71,7 +71,7 @@ function SaitamaStadium2002() {
 	$("#UrawaKomabaStadium").hide();
 	$("#UrawaReds p").eq(0).addClass("selected");
 	$("#UrawaReds p").eq(1).removeClass("selected");
-	$("#List").hide();
+	$("#Route").hide();
 }
 
 // 浦和駒場スタジアム
@@ -80,7 +80,7 @@ function UrawaKomabaStadium() {
 	$("#UrawaKomabaStadium").show();
 	$("#UrawaReds p").eq(0).removeClass("selected");
 	$("#UrawaReds p").eq(1).addClass("selected");
-	$("#List").hide();
+	$("#Route").hide();
 }
 
 /* 柏レイソル */
@@ -164,7 +164,7 @@ function NissanStadium() {
 	$("#YokohamaF・Marinos p").eq(0).addClass("selected");
 	$("#YokohamaF・Marinos p").eq(1).removeClass("selected");
 
-	$("#List").hide();
+	$("#Route").hide();
 }
 
 // ニッパツ三ッ沢球技場
@@ -174,7 +174,7 @@ function NippatsuMitsuzawa() {
 	$("#YokohamaF・Marinos p").eq(0).removeClass("selected");
 	$("#YokohamaF・Marinos p").eq(1).addClass("selected");
 
-	$("#List").hide();
+	$("#Route").hide();
 }
 
 /* 湘南ベルマーレ */
@@ -222,7 +222,7 @@ function YamahaStadium() {
 	$("#JubiroIwata p").eq(0).addClass("selected");
 	$("#JubiroIwata p").eq(1).removeClass("selected");
 
-	$("#List").hide();
+	$("#Route").hide();
 }
 
 // エコパスタジアム
@@ -234,7 +234,7 @@ function EkopaStadium() {
 	$("#JubiroIwata p").eq(0).removeClass("selected");
 	$("#JubiroIwata p").eq(1).addClass("selected");
 
-	$("#List").hide();
+	$("#Route").hide();
 }
 
 /* 名古屋グランパス */
@@ -244,9 +244,29 @@ function NagoyaGrampus() {
 	$("h2").css("background-color", "#D70C18").css("color", "#F8B500");
 	$("#J1").hide();
 	$("#NagoyaGrampus").show();
+	$("#ToyotaStadium").show();
 	$("#input_Location").show();
 
 	$("#NagoyaGrampus").addClass("selection");
+	$("#NagoyaGrampus p").eq(0).addClass("selected");
+}
+
+// 豊田スタジアム
+function ToyotaStadium() {
+	$("#ToyotaStadium").show();
+	$("#PalomaMizuhoStadium").hide();
+	$("#NagoyaGrampus p").eq(0).addClass("selected");
+	$("#NagoyaGrampus p").eq(1).removeClass("selected");
+	$("#Route").hide();
+}
+
+// パロマ瑞穂スタジアム
+function PalomaMizuhoStadium() {
+	$("#PalomaMizuhoStadium").show();
+	$("#ToyotaStadium").hide();
+	$("#NagoyaGrampus p").eq(0).addClass("selected");
+	$("#NagoyaGrampus p").eq(1).removeClass("selected");
+	$("#Route").hide();
 }
 
 /* 京都サンガF.C. */

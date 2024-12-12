@@ -1,24 +1,24 @@
 /* htmlの要素 */
 html {
-	/* 画面サイズを100% */
 	height: 100%;
-	/* 余白をなし */
-	margin: 0;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+}
 
 /* h2の要素 */
 h2 {
-	/* h2のテキストを真ん中で黒文字 */
 	text-align: center;
 	color: black;
 }
 
 /* 地図 */
 iframe {
-	position: absolute;
-	top: 100px;
+	top: 150px;
 	right: 50px;
+	position: absolute;
 }
 
 /* 非表示 */
@@ -29,14 +29,58 @@ iframe {
 /* ボタンの位置 */
 #input_Location {
 	position: absolute;
-	top: 100px;
+	top: 155px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-#List {
+/* 経路案内表示の位置 */
+#Route {
 	position: absolute;
 	top: 200px;
-	left: 50%;
+	left: 49%;
 	transform: translate(-50%, -50%);
+}
+
+#J1 {
+	list-style-type: none;
+	padding-left: 10px;
+	padding: 1em;
+}
+
+/* グローバルナビ */
+nav {
+	background-color: #333;
+	text-align: center;
+	font-weight: bold;
+}
+
+.gnav {
+	display: flex;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.gnav li a {
+	display: block;
+	padding: 1em;
+	color: #fff;
+	text-decoration: none;
+}
+
+.League {
+	display: none;
+	position: absolute;
+	background-color: beige;
+	width: 112px;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.League>li a {
+	color: black;
+}
+
+.Sports:hover .League {
+	display: block;
 }

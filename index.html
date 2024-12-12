@@ -11,63 +11,87 @@
 </head>
 
 <body>
+
 	<h2>スタジアム・ナビゲーション</h2>
 
-	<div id="Sports">
-		<ul>
-			Jリーグ
-			<li><a href="#J1" onclick="J1_show()">J1リーグ</a></li>
-			<li><a href="#">J2リーグ</a></li>
-			<li><a href="#">J3リーグ</a></li>
-		</ul>
+	<!-- グローバルナビ -->
+	<nav>
+		<ul class="gnav">
 
-		<ul>
-			WEリーグ
-			<li><a href="#">WEリーグ</a></li>
-		</ul>
+			<!-- Jリーグ -->
+			<li class="Sports">
+				<a href="">Jリーグ</a>
 
-		<ul>
-			日本プロ野球
-			<li><a href="#">セ・リーグ</a></li>
-			<li><a href="#">パ・リーグ</a></li>
-		</ul>
+				<ul class="League">
+					<li><a href="#J1" onclick="J1_show()">J1リーグ</a></li>
+					<li><a href="#" onclick="">J2リーグ</a></li>
+					<li><a href="#" onclick="">J3リーグ</a></li>
+				</ul>
+			</li>
 
-		<ul>
-			Bリーグ
-			<li><a href="#">B1</a></li>
-			<li><a href="#">B2</a></li>
-		</ul>
-	</div>
+			<!-- WEリーグ -->
+			<li class="Sports">
+				<a href="">WEリーグ</a>
 
+				<ul class="League">
+					<li><a href="#" onclick="">WEリーグ</a></li>
+				</ul>
+			</li>
+
+			<!-- 日本プロ野球 -->
+			<li class="Sports">
+				<a href="">日本プロ野球</a>
+
+				<ul class="League">
+					<li><a href="#" onclick="">セ・リーグ</a></li>
+					<li><a href="#" onclick="">パ・リーグ</a></li>
+				</ul>
+			</li>
+
+			<!-- Bリーグ -->
+			<li class="Sports">
+				<a href="">Bリーグ</a>
+
+				<ul class="League">
+					<li><a href="#" onclick="">B1リーグ</a></li>
+					<li><a href="#" onclick="">B2リーグ</a></li>
+				</ul>
+			</li>
+
+		</ul>
+	</nav>
+
+	<!-- 出発地入力欄 -->
 	<span id="input_Location" class="Invisible">
 		<input type="text" id="Location" placeholder="出発地">
 		<input type="button" value="検索" onclick="input()">
 	</span>
 
-	<ul id="List"></ul>
+	<!-- 経路 -->
+	<div id="Route"></div>
 
 	<div id="J1" class="Invisible">
 		<h3>J1リーグ</h3>
-		<li><a href="#HokkaidoConsadoleSapporo" onclick="HokkaidoConsadoleSapporo()">北海道コンサドーレ札幌</a></li>
-		<li><a href="#KashimaAntlers" onclick="KashimaAntlers()">鹿島アントラーズ</a></li>
-		<li><a href="#UrawaReds" onclick="UrawaReds()">浦和レッズ</a></li>
-		<li><a href="#KashiwaReysol" onclick="KashiwaReysol()">柏レイソル</a></li>
-		<li><a href="#FCTokyo" onclick="FCTokyo()">FC東京</a></li>
-		<li><a href="#TokyoVerdy" onclick="TokyoVerdy()">東京ヴェルディ</a></li>
-		<li><a href="#FCMachidaZelvia" onclick="FCMachidaZelvia()">FC町田ゼルビア</a></li>
-		<li><a href="#KawasakiFrontale" onclick="KawasakiFrontale()">川崎フロンターレ</a></li>
-		<li><a href="#YokohamaF・Marinos" onclick="YokohamaFMarinos()">横浜F・マリノス</a></li>
-		<li><a href="#ShonanBellmare" onclick="ShonanBellmare()">湘南ベルマーレ</a></li>
-		<li><a href="#AlbirexNiigata" onclick="AlbirexNiigata()">アルビレックス新潟</a></li>
-		<li><a href="#JubiroIwata" onclick="JubiroIwata()">ジュビロ磐田</a></li>
-		<li><a href="#NagoyaGrampus" onclick="NagoyaGrampus()">名古屋グランパス</a></li>
-		<li><a href="#KyotoSangaFC" onclick="KyotoSangaFC()">京都サンガF.C.</a></li>
-		<li><a href="#GambaOsaka" onclick="GambaOsaka()">ガンバ大阪</a></li>
-		<li><a href="#CerezoOsaka" onclick="CerezoOsaka()">セレッソ大阪</a></li>
-		<li><a href="#VisselKobe" onclick="VisselKobe()">ヴィッセル神戸</a></li>
-		<li><a href="#SanfrecceHiroshima" onclick="SanfrecceHiroshima()">サンフレッチェ広島</a></li>
-		<li><a href="#AvispaFukuoka" onclick="AvispaFukuoka()">アビスパ福岡</a></li>
-		<li><a href="#SaganTosu" onclick="SaganTosu()">サガン鳥栖</a></li>
+		<li><a href="#" onclick="HokkaidoConsadoleSapporo()">北海道コンサドーレ札幌</a></li>
+		<li><a href="#" onclick="KashimaAntlers()">鹿島アントラーズ</a></li>
+		<li><a href="#" onclick="UrawaReds()">浦和レッズ</a></li>
+		<li><a href="#" onclick="KashiwaReysol()">柏レイソル</a></li>
+		<li><a href="#" onclick="FCTokyo()">FC東京</a></li>
+		<li><a href="#" onclick="TokyoVerdy()">東京ヴェルディ</a></li>
+		<li><a href="#" onclick="FCMachidaZelvia()">FC町田ゼルビア</a></li>
+		<li><a href="#" onclick="KawasakiFrontale()">川崎フロンターレ</a></li>
+		<li><a href="#" onclick="YokohamaFMarinos()">横浜F・マリノス</a></li>
+		<li><a href="#" onclick="ShonanBellmare()">湘南ベルマーレ</a></li>
+		<li><a href="#" onclick="AlbirexNiigata()">アルビレックス新潟</a></li>
+		<li><a href="#" onclick="JubiroIwata()">ジュビロ磐田</a></li>
+		<li><a href="#" onclick="NagoyaGrampus()">名古屋グランパス</a></li>
+		<li><a href="#" onclick="KyotoSangaFC()">京都サンガF.C.</a></li>
+		<li><a href="#" onclick="GambaOsaka()">ガンバ大阪</a></li>
+		<li><a href="#" onclick="CerezoOsaka()">セレッソ大阪</a></li>
+		<li><a href="#" onclick="VisselKobe()">ヴィッセル神戸</a></li>
+		<li><a href="#" onclick="SanfrecceHiroshima()">サンフレッチェ広島</a></li>
+		<li><a href="#" onclick="AvispaFukuoka()">アビスパ福岡</a></li>
+		<li><a href="#" onclick="SaganTosu()">サガン鳥栖</a></li>
 	</div>
 
 	<div id="J1_info">
@@ -75,7 +99,7 @@
 		<div id="HokkaidoConsadoleSapporo" class="Invisible">
 			<h4>北海道コンサドーレ札幌</h4>
 			<p onclick="SapporoDome()">大和ハウス プレミストドーム</p>
-			<p onclick="SapporoAtsubetsu()">札幌厚別公園陸上競技場</p>
+			<!-- <p onclick="SapporoAtsubetsu()">札幌厚別公園陸上競技場</p>(改修工事中) -->
 			<a href="https://www.jleague-ticket.jp/club/cs/" target="_blank">チケコン(Jリーグチケット)</a>
 
 			<!-- 大和ハウス プレミストドーム -->
@@ -87,14 +111,14 @@
 				</iframe>
 			</div>
 
-			<!-- 札幌厚別公園陸上競技場 -->
-			<div id="SapporoAtsubetsu">
+			<!-- 札幌厚別公園陸上競技場(改修工事中) -->
+			<!-- <div id="SapporoAtsubetsu">
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.0803930142574!2d141.46217477562203!3d43.01869499323804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2b480fefaec7%3A0x469d765f644a1fd4!2z5Y6a5Yil5YWs5ZyS56u25oqA5aC0!5e0!3m2!1sja!2sjp!4v1732761621502!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
-			</div>
+			</div> -->
 		</div>
 
 		<!-- 鹿島アントラーズ -->
@@ -292,23 +316,27 @@
 		<!-- 名古屋グランパス -->
 		<div id="NagoyaGrampus" class="Invisible">
 			<h4>名古屋グランパス</h4>
-			<p>豊田スタジアム</p>
-			<!-- <p>パロマ瑞穂スタジアム(建て替え工事中)</p> -->
+			<p onclick="ToyotaStadium()">豊田スタジアム</p>
+			<!-- <p onclick="PalomaMizuhoStadium()">パロマ瑞穂スタジアム</p> -->
 			<a href="https://www.jleague-ticket.jp/club/ng/" target="_blank">グランパスチケットストア(Jリーグチケット)</a>
 
 			<!-- 豊田スタジアム -->
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.88989758634!2d137.16834437522317!3d35.08448366252506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a0599ad28d2f%3A0xdd3fe874a2ca74db!2z6LGK55Sw44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1732768737810!5m2!1sja!2sjp"
-				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade">
-			</iframe>
+			<div id="ToyotaStadium">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.88989758634!2d137.16834437522317!3d35.08448366252506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a0599ad28d2f%3A0xdd3fe874a2ca74db!2z6LGK55Sw44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1732768737810!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
 
-			<!-- パロマ瑞穂スタジアム -->
-			<!-- <iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.3970203489257!2d136.94090347522493!3d35.12176471050508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037af92b1a6541%3A0xd05f4d5c236bf3ed!2z44OR44Ot44Oe55Ge56mC44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1732769196962!5m2!1sja!2sjp"
-				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade">
-			</iframe> -->
+			<!-- パロマ瑞穂スタジアム(建て替え工事中) -->
+			<!-- <div id="PalomaMizuhoStadium">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.3970203489257!2d136.94090347522493!3d35.12176471050508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037af92b1a6541%3A0xd05f4d5c236bf3ed!2z44OR44Ot44Oe55Ge56mC44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1732769196962!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div> -->
 		</div>
 
 		<!-- 京都サンガF.C. -->
