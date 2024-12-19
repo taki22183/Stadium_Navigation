@@ -12,6 +12,16 @@ body {
 h2 {
 	text-align: center;
 	color: black;
+	padding: 10px;
+	margin: 0;
+}
+
+header>a {
+	text-decoration: none;
+}
+
+body>a {
+	text-decoration: none;
 }
 
 /* 地図 */
@@ -22,7 +32,7 @@ iframe {
 }
 
 /* 非表示 */
-.Invisible {
+.Hidden {
 	display: none;
 }
 
@@ -38,11 +48,17 @@ iframe {
 #Route {
 	position: absolute;
 	top: 200px;
-	left: 49%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-#J1 {
+#J1,
+#J2,
+#J3,
+#NationalStadium,
+#WE,
+#CentralLeague,
+#PacificLeague {
 	list-style-type: none;
 	padding-left: 10px;
 	padding: 1em;
@@ -59,6 +75,7 @@ nav {
 	display: flex;
 	list-style-type: none;
 	padding-left: 0;
+	/* justify-content: center; */
 }
 
 .gnav li a {
@@ -83,4 +100,8 @@ nav {
 
 .Sports:hover .League {
 	display: block;
+}
+
+ul.gnav {
+	margin: 0;
 }

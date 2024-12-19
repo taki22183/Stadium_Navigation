@@ -15,10 +15,10 @@ function input() {
 
 /* スタジアム名を取得 */
 function Stadium_Name() {
-	var Clubname = $(".selection").attr("id");
+	var Clubname = $(".Selection").attr("id");
 
-	if ($(".selected").length)
-		var Stadium = $("p.selected").text();
+	if ($(".Selected").length)
+		var Stadium = $("p.Selected").text();
 	else
 		var Stadium = $("#" + Clubname + " p").text();
 
@@ -27,8 +27,8 @@ function Stadium_Name() {
 
 /* 削除 */
 function remove() {
-	$(".selection").removeClass("selection");
-	$(".selected").removeClass("selected");
+	$(".Selection").removeClass("Selection");
+	$(".Selected").removeClass("Selected");
 	$("#Location").val("");
 	$("#Route").hide();
 }
