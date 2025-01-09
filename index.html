@@ -5,11 +5,12 @@
 	<meta charset="UTF-8">
 	<title>スタジアム アクセス</title>
 	<link rel="stylesheet" href="Style.css">
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+	<script src="jquery-3.7.1.min.js"></script>
 	<script src="System.js"></script>
 	<script src="JLeague.js"></script>
 	<script src="WELeague.js"></script>
 	<script src="NPB.js"></script>
+	<script src="BLeague.js"></script>
 </head>
 
 <body>
@@ -55,14 +56,13 @@
 
 			<!-- Bリーグ -->
 			<li class="Sports">
-				<a href="">Bリーグ</a>
+				<a href="#BLeague" onclick="BLeague()">Bリーグ</a>
 
 				<ul class="League">
-					<li><a href="#" onclick="">B1リーグ</a></li>
-					<li><a href="#" onclick="">B2リーグ</a></li>
+					<li><a href="#B1" onclick="B1_show()">B1リーグ</a></li>
+					<li><a href="#B2" onclick="B2_show()">B2リーグ</a></li>
 				</ul>
 			</li>
-
 		</ul>
 	</nav>
 
@@ -75,10 +75,10 @@
 	<!-- 経路 -->
 	<div id="Route"></div>
 
+	<!-- Jリーグ -->
 	<section id="JLeague">
 		<div id="J1" class="Hidden">
 			<h3>J1リーグ</h3>
-			<li><a href="#HokkaidoConsadoleSapporo" onclick="HokkaidoConsadoleSapporo()">北海道コンサドーレ札幌</a></li>
 			<li><a href="#KashimaAntlers" onclick="KashimaAntlers()">鹿島アントラーズ</a></li>
 			<li><a href="#UrawaReds" onclick="UrawaReds()">浦和レッズ</a></li>
 			<li><a href="#KashiwaReysol" onclick="KashiwaReysol()">柏レイソル</a></li>
@@ -87,54 +87,54 @@
 			<li><a href="#FCMachidaZelvia" onclick="FCMachidaZelvia()">FC町田ゼルビア</a></li>
 			<li><a href="#KawasakiFrontale" onclick="KawasakiFrontale()">川崎フロンターレ</a></li>
 			<li><a href="#YokohamaF・Marinos" onclick="YokohamaFMarinos()">横浜F・マリノス</a></li>
+			<li><a href="#YokohamaFC" onclick="YokohamaFC()">横浜FC</a></li>
 			<li><a href="#ShonanBellmare" onclick="ShonanBellmare()">湘南ベルマーレ</a></li>
 			<li><a href="#AlbirexNiigata" onclick="AlbirexNiigata()">アルビレックス新潟</a></li>
-			<li><a href="#JubiroIwata" onclick="JubiroIwata()">ジュビロ磐田</a></li>
+			<li><a href="#ShimizuS-Pulse" onclick="ShimizuSPulse()">清水エスパルス</a></li>
 			<li><a href="#NagoyaGrampus" onclick="NagoyaGrampus()">名古屋グランパス</a></li>
 			<li><a href="#KyotoSangaF.C." onclick="KyotoSangaFC()">京都サンガF.C.</a></li>
 			<li><a href="#GambaOsaka" onclick="GambaOsaka()">ガンバ大阪</a></li>
 			<li><a href="#CerezoOsaka" onclick="CerezoOsaka()">セレッソ大阪</a></li>
 			<li><a href="#VisselKobe" onclick="VisselKobe()">ヴィッセル神戸</a></li>
+			<li><a href="#FagianoOkayama" onclick="FagianoOkayama()">ファジアーノ岡山</a></li>
 			<li><a href="#SanfrecceHiroshima" onclick="SanfrecceHiroshima()">サンフレッチェ広島</a></li>
 			<li><a href="#AvispaFukuoka" onclick="AvispaFukuoka()">アビスパ福岡</a></li>
-			<li><a href="#SaganTosu" onclick="SaganTosu()">サガン鳥栖</a></li>
 		</div>
 
 		<div id="J2" class="Hidden">
 			<h3>J2リーグ</h3>
+			<li><a href="#HokkaidoConsadoleSapporo" onclick="HokkaidoConsadoleSapporo()">北海道コンサドーレ札幌</a></li>
 			<li><a href="#VegaltaSendai" onclick="VegaltaSendai()">ベガルタ仙台</a></li>
 			<li><a href="#BlaublitzAkita" onclick="BlaublitzAkita()">ブラウブリッツ秋田</a></li>
 			<li><a href="#MontedioYamagata" onclick="MontedioYamagata()">モンテディオ山形</a></li>
 			<li><a href="#IwakiFC" onclick="IwakiFC()">いわきFC</a></li>
 			<li><a href="#MitoHollyhock" onclick="MitoHollyhock()">水戸ホーリーホック</a></li>
-			<li><a href="#TochigiSC" onclick="TochigiSC()">栃木SC</a></li>
-			<li><a href="#ThespaGunma" onclick="ThespaGunma()">ザスパ群馬</a></li>
+			<li><a href="#RBOmiyaArdija" onclick="RBOmiyaArdija()">RB大宮アルディージャ</a></li>
 			<li><a href="#JEFUnitedChiba" onclick="JEFUnitedChiba()">ジェフユナイテッド千葉</a></li>
-			<li><a href="#YokohamaFC" onclick="YokohamaFC()">横浜FC</a></li>
 			<li><a href="#VentforetKofu" onclick="VentforetKofu()">ヴァンフォーレ甲府</a></li>
-			<li><a href="#ShimizuS-Pulse" onclick="ShimizuSPulse()">清水エスパルス</a></li>
+			<li><a href="#KatallerToyama" onclick="KatallerToyama()">カターレ富山</a></li>
+			<li><a href="#JubiroIwata" onclick="JubiroIwata()">ジュビロ磐田</a></li>
 			<li><a href="#FujiedaMYFC" onclick="FujiedaMYFC()">藤枝MYFC</a></li>
-			<li><a href="#FagianoOkayama" onclick="FagianoOkayama()">ファジアーノ岡山</a></li>
 			<li><a href="#RenofaYamaguchiFC" onclick="RenofaYamaguchiFC()">レノファ山口FC</a></li>
 			<li><a href="#TokushimaVortis" onclick="TokushimaVortis()">徳島ヴォルティス</a></li>
 			<li><a href="#EhimeFC" onclick="EhimeFC()">愛媛FC</a></li>
+			<li><a href="#FCImabari" onclick="FCImabari()">FC今治</a></li>
+			<li><a href="#SaganTosu" onclick="SaganTosu()">サガン鳥栖</a></li>
 			<li><a href="#V-VarenNagasaki" onclick="VVarenNagasaki()">V・ファーレン長崎</a></li>
 			<li><a href="#RoassoKumamoto" onclick="RoassoKumamoto()">ロアッソ熊本</a></li>
 			<li><a href="#OitaTrinita" onclick="OitaTrinita()">大分トリニータ</a></li>
-			<li><a href="#KagoshimaUnitedFC" onclick="KagoshimaUnitedFC()">鹿児島ユナイテッドFC</a></li>
 		</div>
 
 		<div id="J3" class="Hidden">
 			<h3>J3リーグ</h3>
 			<li><a href="#VanraureHachinohe" onclick="VanraureHachinohe()">ヴァンラーレ八戸</a></li>
-			<li><a href="#IwateGrullaMorioka" onclick="IwateGrullaMorioka()">いわてグルージャ盛岡</a></li>
 			<li><a href="#FukushimaUnitedFC" onclick="FukushimaUnitedFC()">福島ユナイテッドFC</a></li>
-			<li><a href="#OmiyaArdija" onclick="OmiyaArdija()">大宮アルディージャ</a></li>
-			<li><a href="#Y.S.C.C.Yokohama" onclick="YSCCYokohama()">Y.S.C.C.横浜</a></li>
+			<li><a href="#TochigiSC" onclick="TochigiSC()">栃木SC</a></li>
+			<li><a href="#TochigiCity" onclick="TochigiCity()">栃木シティ</a></li>
+			<li><a href="#ThespaGunma" onclick="ThespaGunma()">ザスパ群馬</a></li>
 			<li><a href="#S.C.Sagamihara" onclick="SCSagamihara()">SC相模原</a></li>
 			<li><a href="#MatsumotoYamagaF.C." onclick="MatsumotoYamagaFC()">松本山雅FC</a></li>
 			<li><a href="#ACNaganoParceiro" onclick="ACNaganoParceiro()">AC長野パルセイロ</a></li>
-			<li><a href="#KatallerToyama" onclick="KatallerToyama()">カターレ富山</a></li>
 			<li><a href="#ZweigenKanazawa" onclick="ZweigenKanazawa()">ツエーゲン金沢</a></li>
 			<li><a href="#AzulClaroNumazu" onclick="AzulClaroNumazu()">アスルクラロ沼津</a></li>
 			<li><a href="#FCGifu" onclick="FCGifu()">FC岐阜</a></li>
@@ -142,41 +142,17 @@
 			<li><a href="#NaraClub" onclick="NaraClub()">奈良クラブ</a></li>
 			<li><a href="#GainareTottori" onclick="GainareTottori()">ガイナーレ鳥取</a></li>
 			<li><a href="#KamatamareSanuki" onclick="KamatamareSanuki()">カマタマーレ讃岐</a></li>
-			<li><a href="#FCImabari" onclick="FCImabari()">FC今治</a></li>
+			<li><a href="#KochiUnitedSC" onclick="KochiUnitedSC()">高知ユナイテッドSC</a></li>
 			<li><a href="#GiravanzKitakyushu" onclick="GiravanzKitakyushu()">ギラヴァンツ北九州</a></li>
 			<li><a href="#TegevajaroMiyazaki" onclick="TegevajaroMiyazaki()">テゲバジャーロ宮崎</a></li>
+			<li><a href="#KagoshimaUnitedFC" onclick="KagoshimaUnitedFC()">鹿児島ユナイテッドFC</a></li>
 			<li><a href="#FCRyukyu" onclick="FCRyukyu()">FC琉球</a></li>
 		</div>
 	</section>
 
-	<section id="JLeague_info">
-		<div id="J1_info">
-			<!-- 北海道コンサドーレ札幌 -->
-			<div id="HokkaidoConsadoleSapporo" class="Hidden">
-				<h4>北海道コンサドーレ札幌</h4>
-				<p onclick="SapporoDome()">大和ハウス プレミストドーム</p>
-				<!-- <p onclick="SapporoAtsubetsu()">札幌厚別公園陸上競技場</p>(改修工事中) -->
-				<a href="https://www.jleague-ticket.jp/club/cs/" target="_blank">チケコン(Jリーグチケット)</a>
-
-				<!-- 大和ハウス プレミストドーム -->
-				<div id="SapporoDome">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.249325436877!2d141.4071629756218!3d43.01513899346539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2ac1a43d6fc7%3A0x2a76b1aae78ab68b!2z5aSn5ZKM44OP44Km44K5IOODl-ODrOODn-OCueODiOODieODvOODoA!5e0!3m2!1sja!2sjp!4v1732754855607!5m2!1sja!2sjp"
-						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade">
-					</iframe>
-				</div>
-
-				<!-- 札幌厚別公園陸上競技場(改修工事中) -->
-				<!-- <div id="SapporoAtsubetsu">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.0803930142574!2d141.46217477562203!3d43.01869499323804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2b480fefaec7%3A0x469d765f644a1fd4!2z5Y6a5Yil5YWs5ZyS56u25oqA5aC0!5e0!3m2!1sja!2sjp!4v1732761621502!5m2!1sja!2sjp"
-					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade">
-				</iframe>
-			</div> -->
-			</div>
-
+	<!-- Jリーグ クラブ -->
+	<section id="JLeague_Club">
+		<div id="J1_Club">
 			<!-- 鹿島アントラーズ -->
 			<div id="KashimaAntlers" class="Hidden">
 				<h4>鹿島アントラーズ</h4>
@@ -316,6 +292,21 @@
 				</div>
 			</div>
 
+			<!-- 横浜FC -->
+			<div id="YokohamaFC" class="Hidden">
+				<h4>横浜FC</h4>
+				<p>ニッパツ三ッ沢球技場</p>
+				<a href="https://www.jleague-ticket.jp/club/yk/" target="_blank">Jリーグチケット</a>
+				<a href="https://yokohamafc.tstar.jp/" target="_blank">横浜FCチケット</a>
+
+				<!-- ニッパツ三ッ沢球技場 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.419663212435!2d139.60124377524087!3d35.46915924159553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185bfbf787bab7%3A0x2809713be7170ff3!2z44OL44OD44OR44OE5LiJ44OE5rKi55CD5oqA5aC0!5e0!3m2!1sja!2sjp!4v1732768512964!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
 			<!-- 湘南ベルマーレ -->
 			<div id="ShonanBellmare" class="Hidden">
 				<h4>湘南ベルマーレ</h4>
@@ -344,30 +335,18 @@
 				</iframe>
 			</div>
 
-			<!-- ジュビロ磐田 -->
-			<div id="JubiroIwata" class="Hidden">
-				<h4>ジュビロ磐田</h4>
-				<p onclick="YamahaStadium()">ヤマハスタジアム(磐田)</p>
-				<p onclick="EkopaStadium()">エコパスタジアム</p>
-				<a href="https://www.jleague-ticket.jp/club/ju/" target="_blank">Jubi ticke+(Jリーグチケット)</a>
+			<!-- 清水エスパルス -->
+			<div id="ShimizuS-Pulse" class="Hidden">
+				<h4>清水エスパルス</h4>
+				<p>IAIスタジアム日本平</p>
+				<a href="https://www.jleague-ticket.jp/club/ss/" target="_blank">パルチケ(Jリーグチケット)</a>
 
-				<!-- ヤマハスタジアム(磐田) -->
-				<div id="YamahaStadium">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.2057871083907!2d137.87249667520692!3d34.725206881898366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ae5aba6986721%3A0x4e8d83c277880233!2z44Ok44Oe44OP44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1732768621467!5m2!1sja!2sjp"
-						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade">
-					</iframe>
-				</div>
-
-				<!-- エコパスタジアム -->
-				<div id="EkopaStadium">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5513.792170215554!2d137.96655616032547!3d34.74248054562467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601afa6631708a3b%3A0xfadf4c04ddaa981!2z5bCP56yg5bGx57eP5ZCI6YGL5YuV5YWs5ZySIOOCqOOCs-ODkeOCueOCv-OCuOOCouODoA!5e0!3m2!1sja!2sjp!4v1732768676659!5m2!1sja!2sjp"
-						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade">
-					</iframe>
-				</div>
+				<!-- IAIスタジアム日本平 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.8936958833833!2d138.4787252752187!3d34.98432736794275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a312cff58ca07%3A0x32dcfb4a201a1e4d!2zSUFJ44K544K_44K444Ki44Og5pel5pys5bmz!5e0!3m2!1sja!2sjp!4v1734568147838!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
 			</div>
 
 			<!-- 名古屋グランパス -->
@@ -453,6 +432,20 @@
 				</iframe>
 			</div>
 
+			<!-- ファジアーノ岡山 -->
+			<div id="FagianoOkayama" class="Hidden">
+				<h4>ファジアーノ岡山</h4>
+				<p>シティライトスタジアム</p>
+				<a href="https://www.jleague-ticket.jp/club/fo/" target="_blank">ファジチケ(Jリーグチケット)</a>
+
+				<!-- シティライトスタジアム -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.9737456817193!2d133.91610227520502!3d34.68061208429139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35540669f9c44abb%3A0xd87242d84e8eef87!2z44K344OG44Kj44Op44Kk44OI44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1734568194220!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
 			<!-- サンフレッチェ広島 -->
 			<div id="SanfrecceHiroshima" class="Hidden">
 				<h4>サンフレッチェ広島</h4>
@@ -480,24 +473,35 @@
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
 			</div>
+		</div>
 
-			<!-- サガン鳥栖 -->
-			<div id="SaganTosu" class="Hidden">
-				<h4>サガン鳥栖</h4>
-				<p>駅前不動産スタジアム</p>
-				<a href="https://www.jleague-ticket.jp/club/st/" target="_blank">Jリーグチケット</a>
+		<div id="J2_Club">
+			<!-- 北海道コンサドーレ札幌 -->
+			<div id="HokkaidoConsadoleSapporo" class="Hidden">
+				<h4>北海道コンサドーレ札幌</h4>
+				<p onclick="SapporoDome()">大和ハウス プレミストドーム</p>
+				<!-- <p onclick="SapporoAtsubetsu()">札幌厚別公園陸上競技場</p>(改修工事中) -->
+				<a href="https://www.jleague-ticket.jp/club/cs/" target="_blank">チケコン(Jリーグチケット)</a>
 
-				<!-- 駅前不動産スタジアム -->
+				<!-- 大和ハウス プレミストドーム -->
+				<div id="SapporoDome">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.249325436877!2d141.4071629756218!3d43.01513899346539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2ac1a43d6fc7%3A0x2a76b1aae78ab68b!2z5aSn5ZKM44OP44Km44K5IOODl-ODrOODn-OCueODiOODieODvOODoA!5e0!3m2!1sja!2sjp!4v1732754855607!5m2!1sja!2sjp"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
+				</div>
+
+				<!-- 札幌厚別公園陸上競技場(改修工事中) -->
+				<!-- <div id="SapporoAtsubetsu">
 				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.9609481995744!2d130.5173758251472!3d33.37208555333901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541a3af80cefbb5%3A0x82e10a5655b8ab9e!2z6aeF5YmN5LiN5YuV55Sj44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1732768990581!5m2!1sja!2sjp"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.0803930142574!2d141.46217477562203!3d43.01869499323804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2b480fefaec7%3A0x469d765f644a1fd4!2z5Y6a5Yil5YWs5ZyS56u25oqA5aC0!5e0!3m2!1sja!2sjp!4v1732761621502!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
+			</div> -->
 			</div>
 
-		</div>
-
-		<div id="J2_info">
 			<!-- ベガルタ仙台 -->
 			<div id="VegaltaSendai" class="Hidden">
 				<h4>ベガルタ仙台</h4>
@@ -531,7 +535,7 @@
 				<h4>モンテディオ山形</h4>
 				<p>NDソフトスタジアム山形</p>
 				<a href="https://www.jleague-ticket.jp/club/my/" target="_blank">MONTEDIO TICKET</a><br>
-				<a href="https://ticket.rakuten.co.jp/sports/soccer/rtm6bbd/" target="_blank">楽天チケット</a><br>
+				<a href="https://ticket.rakuten.co.jp/sports/soccer/rtm6bbd/" target="_blank">楽天チケット</a>
 
 				<!-- NDソフトスタジアム山形 -->
 				<iframe
@@ -569,41 +573,15 @@
 				</iframe>
 			</div>
 
-			<!-- 栃木SC -->
-			<div id="TochigiSC" class="Hidden">
-				<h4>栃木SC</h4>
-				<p onclick="KansekiStadiumTochigi()">カンセキスタジアムとちぎ</p>
-				<p onclick="GreenStadium()">栃木県グリーンスタジアム</p>
-				<a href="https://www.jleague-ticket.jp/club/ts/" target="_blank">トッキーチケット(Jリーグチケット)</a>
+			<!-- RB大宮アルディージャ -->
+			<div id="RBOmiyaArdija" class="Hidden">
+				<h4>RB大宮アルディージャ</h4>
+				<p>NACK5スタジアム大宮</p>
+				<a href="https://www.jleague-ticket.jp/club/oa/" target="_blank">Jリーグチケット</a>
 
-				<!-- カンセキスタジアムとちぎ -->
-				<div id="KansekiStadiumTochigi">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.621512352263!2d139.85509267528948!3d36.51499748372535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f5d030c39544d%3A0xcb417823e36f537b!2z44Kr44Oz44K744Kt44K544K_44K444Ki44Og44Go44Gh44GO!5e0!3m2!1sja!2sjp!4v1734567266046!5m2!1sja!2sjp"
-						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade">
-					</iframe>
-				</div>
-
-				<!-- 栃木県グリーンスタジアム -->
-				<div id="GreenStadium">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.892474805372!2d139.9839406752913!3d36.55670548138844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f5f5a0e40b203%3A0x3130aec27f0c656b!2z5qCD5pyo55yM44Kw44Oq44O844Oz44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1734567763981!5m2!1sja!2sjp"
-						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade">
-					</iframe>
-				</div>
-			</div>
-
-			<!-- ザスパ群馬 -->
-			<div id="ThespaGunma" class="Hidden">
-				<h4>ザスパ群馬</h4>
-				<p>正田醤油スタジアム群馬</p>
-				<a href="https://www.jleague-ticket.jp/club/pa/" target="_blank">ザスパチケット(Jリーグチケット)</a>
-
-				<!-- 正田醤油スタジアム群馬 -->
+				<!-- NACK5スタジアム大宮 -->
 				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3210.9043223857957!2d139.05075087528448!3d36.41151008951452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef359887279db%3A0x1ea0e4d5ee69f637!2z5q2j55Sw6Yak5rK544K544K_44K444Ki44Og576k6aas!5e0!3m2!1sja!2sjp!4v1734567902068!5m2!1sja!2sjp"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.2557096016094!2d139.63094417526148!3d35.916240517029436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018c1399504d005%3A0x6b287c3549d9574c!2zTkFDSzXjgrnjgr_jgrjjgqLjg6DlpKflrq4!5e0!3m2!1sja!2sjp!4v1734569029452!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
@@ -623,21 +601,6 @@
 				</iframe>
 			</div>
 
-			<!-- 横浜FC -->
-			<div id="YokohamaFC" class="Hidden">
-				<h4>横浜FC</h4>
-				<p>ニッパツ三ッ沢球技場</p>
-				<a href="https://www.jleague-ticket.jp/club/yk/" target="_blank">Jリーグチケット</a>
-				<a href="https://yokohamafc.tstar.jp/" target="_blank">横浜FCチケット</a>
-
-				<!-- ニッパツ三ッ沢球技場 -->
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.419663212435!2d139.60124377524087!3d35.46915924159553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185bfbf787bab7%3A0x2809713be7170ff3!2z44OL44OD44OR44OE5LiJ44OE5rKi55CD5oqA5aC0!5e0!3m2!1sja!2sjp!4v1732768512964!5m2!1sja!2sjp"
-					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade">
-				</iframe>
-			</div>
-
 			<!-- ヴァンフォーレ甲府 -->
 			<div id="VentforetKofu" class="Hidden">
 				<h4>ヴァンフォーレ甲府</h4>
@@ -652,18 +615,44 @@
 				</iframe>
 			</div>
 
-			<!-- 清水エスパルス -->
-			<div id="ShimizuS-Pulse" class="Hidden">
-				<h4>清水エスパルス</h4>
-				<p>IAIスタジアム日本平</p>
-				<a href="https://www.jleague-ticket.jp/club/ss/" target="_blank">パルチケ(Jリーグチケット)</a>
+			<!-- カターレ富山 -->
+			<div id="KatallerToyama" class="Hidden">
+				<h4>カターレ富山</h4>
+				<p>富山県総合運動公園陸上競技場</p>
+				<a href="https://jleague-ticket.jp/club/kt/" target="_blank">Jリーグチケット</a>
 
-				<!-- IAIスタジアム日本平 -->
+				<!-- 富山県総合運動公園陸上競技場 -->
 				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.8936958833833!2d138.4787252752187!3d34.98432736794275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a312cff58ca07%3A0x32dcfb4a201a1e4d!2zSUFJ44K544K_44K444Ki44Og5pel5pys5bmz!5e0!3m2!1sja!2sjp!4v1734568147838!5m2!1sja!2sjp"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.0574486708183!2d137.19311867529478!3d36.625003777556756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff78e7f8208f1e3%3A0x794ecfce8d1e44cf!2z5a-M5bGx55yM57eP5ZCI6YGL5YuV5YWs5ZySIOmZuOS4iuertuaKgOWgtA!5e0!3m2!1sja!2sjp!4v1734569135127!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
+			</div>
+
+			<!-- ジュビロ磐田 -->
+			<div id="JubiroIwata" class="Hidden">
+				<h4>ジュビロ磐田</h4>
+				<p onclick="YamahaStadium()">ヤマハスタジアム(磐田)</p>
+				<p onclick="EkopaStadium()">エコパスタジアム</p>
+				<a href="https://www.jleague-ticket.jp/club/ju/" target="_blank">Jubi ticke+(Jリーグチケット)</a>
+
+				<!-- ヤマハスタジアム(磐田) -->
+				<div id="YamahaStadium">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.2057871083907!2d137.87249667520692!3d34.725206881898366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ae5aba6986721%3A0x4e8d83c277880233!2z44Ok44Oe44OP44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1732768621467!5m2!1sja!2sjp"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
+				</div>
+
+				<!-- エコパスタジアム -->
+				<div id="EkopaStadium">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5513.792170215554!2d137.96655616032547!3d34.74248054562467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601afa6631708a3b%3A0xfadf4c04ddaa981!2z5bCP56yg5bGx57eP5ZCI6YGL5YuV5YWs5ZySIOOCqOOCs-ODkeOCueOCv-OCuOOCouODoA!5e0!3m2!1sja!2sjp!4v1732768676659!5m2!1sja!2sjp"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
+				</div>
 			</div>
 
 			<!-- 藤枝MYFC -->
@@ -675,20 +664,6 @@
 				<!-- 藤枝総合運動公園サッカー場 -->
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.9914913251396!2d138.23034887521405!3d34.881559973488045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a51d6babd3bad%3A0x5a14bc311ca4302!2z6Jek5p6d57eP5ZCI6YGL5YuV5YWs5ZySIOOCteODg-OCq-ODvOWgtA!5e0!3m2!1sja!2sjp!4v1734568169657!5m2!1sja!2sjp"
-					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade">
-				</iframe>
-			</div>
-
-			<!-- ファジアーノ岡山 -->
-			<div id="FagianoOkayama" class="Hidden">
-				<h4>ファジアーノ岡山</h4>
-				<p>シティライトスタジアム</p>
-				<a href="https://www.jleague-ticket.jp/club/fo/" target="_blank">ファジチケ(Jリーグチケット)</a>
-
-				<!-- シティライトスタジアム -->
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.9737456817193!2d133.91610227520502!3d34.68061208429139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35540669f9c44abb%3A0xd87242d84e8eef87!2z44K344OG44Kj44Op44Kk44OI44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1734568194220!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
@@ -748,6 +723,35 @@
 				</iframe>
 			</div>
 
+			<!-- FC今治 -->
+			<div id="FCImabari" class="Hidden">
+				<h4>FC今治</h4>
+				<p>アシックス里山スタジアム</p>
+				<a href="https://www.jleague-ticket.jp/club/fi/" target="_blank">Sailors'(Jリーグチケット)</a><br>
+				<a href="https://l-tike.com/sports/mevent/?mid=259172" target="_blank">ローソンチケット(ビジター席)</a>
+
+				<!-- アシックス里山スタジアム -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.118345826345!2d132.95608097517646!3d34.040835218333534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35503ba1d16f7fdb%3A0xfa4b14bfe739cb1d!2z44Ki44K344OD44Kv44K56YeM5bGx44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1734569406441!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- サガン鳥栖 -->
+			<div id="SaganTosu" class="Hidden">
+				<h4>サガン鳥栖</h4>
+				<p>駅前不動産スタジアム</p>
+				<a href="https://www.jleague-ticket.jp/club/st/" target="_blank">Jリーグチケット</a>
+
+				<!-- 駅前不動産スタジアム -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.9609481995744!2d130.5173758251472!3d33.37208555333901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541a3af80cefbb5%3A0x82e10a5655b8ab9e!2z6aeF5YmN5LiN5YuV55Sj44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1732768990581!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
 			<!-- V・ファーレン長崎 -->
 			<div id="V-VarenNagasaki" class="Hidden">
 				<h4>V・ファーレン長崎</h4>
@@ -793,33 +797,19 @@
 			<!-- 大分トリニータ -->
 			<div id="OitaTrinita" class="Hidden">
 				<h4>大分トリニータ</h4>
-				<p>レゾナックドーム大分</p>
+				<p>クラサスドーム大分</p>
 				<a href="https://jleague-ticket.jp/club/ot/" target="_blank">Jリーグチケット</a>
 
-				<!-- レゾナックドーム大分 -->
+				<!-- クラサスドーム大分 -->
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3338.507443335074!2d131.65492507513977!3d33.20079056220983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35469ec6c150464f%3A0x168f99451fd084b2!2z44Os44K-44OK44OD44Kv44OJ44O844Og5aSn5YiG!5e0!3m2!1sja!2sjp!4v1734568669374!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
 			</div>
-
-			<!-- 鹿児島ユナイテッドFC -->
-			<div id="KagoshimaUnitedFC" class="Hidden">
-				<h4>鹿児島ユナイテッドFC</h4>
-				<p>白波スタジアム</p>
-				<a href="https://www.jleague-ticket.jp/club/ku/" target="_blank">Jリーグチケット</a>
-
-				<!-- 白波スタジアム -->
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.518217453348!2d130.55721987507124!3d31.56483414494494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e60cecf189265%3A0x4b535ad3ef9be35f!2z55m95rOi44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1734568690600!5m2!1sja!2sjp"
-					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade">
-				</iframe>
-			</div>
 		</div>
 
-		<div id="J3_info">
+		<div id="J3_Club">
 			<!-- ヴァンラーレ八戸 -->
 			<div id="VanraureHachinohe" class="Hidden">
 				<h4>ヴァンラーレ八戸</h4>
@@ -834,38 +824,12 @@
 				</iframe>
 			</div>
 
-			<!-- いわてグルージャ盛岡 -->
-			<div id="IwateGrullaMorioka" class="Hidden">
-				<h4>いわてグルージャ盛岡</h4>
-				<p onclick="IwaginStadium()">いわぎんスタジアム</p>
-				<p onclick="Kitakami()">ウエスタンデジタルスタジアムきたかみ</p>
-				<a href="https://www.jleague-ticket.jp/club/gm/" target="_blank">鶴チケ(Jリーグチケット)</a>
-
-				<!-- いわぎんスタジアム -->
-				<div id="IwaginStadium">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.084935384524!2d141.1352621754434!3d39.647803002080714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f85832961d3aaab%3A0x8b2dfa25011dbb7d!2z44GE44KP44GO44KT44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1734568782068!5m2!1sja!2sjp"
-						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade">
-					</iframe>
-				</div>
-
-				<!-- ウエスタンデジタルスタジアムきたかみ -->
-				<div id="Kitakami">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3089.330769376909!2d141.0934544754237!3d39.25806102534395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8f4433033fde3d%3A0xab01d9c3a71cb681!2z44Km44Ko44K544K_44Oz44OH44K444K_44Or44K544K_44K444Ki44Og44GN44Gf44GL44G_!5e0!3m2!1sja!2sjp!4v1734568803192!5m2!1sja!2sjp"
-						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade">
-					</iframe>
-				</div>
-			</div>
-
 			<!-- 福島ユナイテッドFC -->
 			<div id="FukushimaUnitedFC" class="Hidden">
 				<h4>福島ユナイテッドFC</h4>
 				<p onclick="TouhouMinnanoStadium()">とうほう・みんなのスタジアム</p>
 				<p onclick="AizuStadium()">会津総合運動公園あいづ陸上競技場</p>
-				<a href="https://www.jleague-ticket.jp/club/fu/" target="_blank">Jリーグチケット</a><br>
+				<a href="https://www.jleague-ticket.jp/club/fu/" target="_blank">Jリーグチケット</a>
 
 				<!-- とうほう・みんなのスタジアム -->
 				<div id="TouhouMinnanoStadium">
@@ -886,15 +850,55 @@
 				</div>
 			</div>
 
-			<!-- 大宮アルディージャ -->
-			<div id="OmiyaArdija" class="Hidden">
-				<h4>大宮アルディージャ</h4>
-				<p>NACK5スタジアム大宮</p>
-				<a href="https://www.jleague-ticket.jp/club/oa/" target="_blank">Jリーグチケット</a><br>
+			<!-- 栃木SC -->
+			<div id="TochigiSC" class="Hidden">
+				<h4>栃木SC</h4>
+				<p onclick="KansekiStadiumTochigi()">カンセキスタジアムとちぎ</p>
+				<p onclick="GreenStadium()">栃木県グリーンスタジアム</p>
+				<a href="https://www.jleague-ticket.jp/club/ts/" target="_blank">トッキーチケット(Jリーグチケット)</a>
 
-				<!-- NACK5スタジアム大宮 -->
+				<!-- カンセキスタジアムとちぎ -->
+				<div id="KansekiStadiumTochigi">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.621512352263!2d139.85509267528948!3d36.51499748372535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f5d030c39544d%3A0xcb417823e36f537b!2z44Kr44Oz44K744Kt44K544K_44K444Ki44Og44Go44Gh44GO!5e0!3m2!1sja!2sjp!4v1734567266046!5m2!1sja!2sjp"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
+				</div>
+
+				<!-- 栃木県グリーンスタジアム -->
+				<div id="GreenStadium">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.892474805372!2d139.9839406752913!3d36.55670548138844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f5f5a0e40b203%3A0x3130aec27f0c656b!2z5qCD5pyo55yM44Kw44Oq44O844Oz44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1734567763981!5m2!1sja!2sjp"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
+				</div>
+			</div>
+
+			<!-- 栃木シティ -->
+			<div id="TochigiCity" class="Hidden">
+				<h4>栃木シティ</h4>
+				<p>CITY FOOTBALL STATION</p>
+				<a href="https://www.jleague-ticket.jp/club/tc/" target="_blank">Jリーグチケット</a>
+
+				<!-- CITY FOOTBALL STATION -->
 				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.2557096016094!2d139.63094417526148!3d35.916240517029436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018c1399504d005%3A0x6b287c3549d9574c!2zTkFDSzXjgrnjgr_jgrjjgqLjg6DlpKflrq4!5e0!3m2!1sja!2sjp!4v1734569029452!5m2!1sja!2sjp"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.9502239809235!2d139.64339927525714!3d36.33775619363183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f39f49a2f15c9%3A0x90c5b49f6e992ba6!2sCITY%20FOOTBALL%20STATION!5e0!3m2!1sja!2sjp!4v1736400397634!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- ザスパ群馬 -->
+			<div id="ThespaGunma" class="Hidden">
+				<h4>ザスパ群馬</h4>
+				<p>正田醤油スタジアム群馬</p>
+				<a href="https://www.jleague-ticket.jp/club/pa/" target="_blank">ザスパチケット(Jリーグチケット)</a>
+
+				<!-- 正田醤油スタジアム群馬 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3210.9043223857957!2d139.05075087528448!3d36.41151008951452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef359887279db%3A0x1ea0e4d5ee69f637!2z5q2j55Sw6Yak5rK544K544K_44K444Ki44Og576k6aas!5e0!3m2!1sja!2sjp!4v1734567902068!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
@@ -951,20 +955,6 @@
 				<!-- 長野Uスタジアム -->
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3203.9272931339865!2d138.16734847529253!3d36.5799698800839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601d848638ac388b%3A0x8a9beeae8f4b1734!2z6ZW36YeOVeOCueOCv-OCuOOCouODoA!5e0!3m2!1sja!2sjp!4v1734569107481!5m2!1sja!2sjp"
-					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade">
-				</iframe>
-			</div>
-
-			<!-- カターレ富山 -->
-			<div id="KatallerToyama" class="Hidden">
-				<h4>カターレ富山</h4>
-				<p>富山県総合運動公園陸上競技場</p>
-				<a href="https://jleague-ticket.jp/club/kt/" target="_blank">Jリーグチケット</a>
-
-				<!-- 富山県総合運動公園陸上競技場 -->
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.0574486708183!2d137.19311867529478!3d36.625003777556756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff78e7f8208f1e3%3A0x794ecfce8d1e44cf!2z5a-M5bGx55yM57eP5ZCI6YGL5YuV5YWs5ZySIOmZuOS4iuertuaKgOWgtA!5e0!3m2!1sja!2sjp!4v1734569135127!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
@@ -1080,16 +1070,15 @@
 				</iframe>
 			</div>
 
-			<!-- FC今治 -->
-			<div id="FCImabari" class="Hidden">
-				<h4>FC今治</h4>
-				<p>アシックス里山スタジアム</p>
-				<a href="https://www.jleague-ticket.jp/club/fi/" target="_blank">Sailors'(Jリーグチケット)</a><br>
-				<a href="https://l-tike.com/sports/mevent/?mid=259172" target="_blank">ローソンチケット(ビジター席)</a>
+			<!-- 高知ユナイテッドSC -->
+			<div id="KochiUnitedSC" class="Hidden">
+				<h4>高知ユナイテッドSC</h4>
+				<p>高知県立春野総合運動公園陸上競技場</p>
+				<a href="https://www.jleague-ticket.jp/club/kc/" target="_blank">Jリーグチケット</a>
 
-				<!-- アシックス里山スタジアム -->
+				<!-- 高知県立春野総合運動公園陸上競技場 -->
 				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.118345826345!2d132.95608097517646!3d34.040835218333534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35503ba1d16f7fdb%3A0xfa4b14bfe739cb1d!2z44Ki44K344OD44Kv44K56YeM5bGx44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1734569406441!5m2!1sja!2sjp"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.6194468268795!2d133.50022057512845!3d33.51127684610212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354e17f54dd54ad5%3A0x9d575b29d3f2e4cf!2z5pil6YeO57eP5ZCI6YGL5YuV5YWs5ZySIOmZuOS4iuertuaKgOWgtA!5e0!3m2!1sja!2sjp!4v1736399856112!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
@@ -1118,6 +1107,20 @@
 				<!-- いちご宮崎新富サッカー場 -->
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.832223678443!2d131.48836347509229!3d32.07378631959276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3538a77321702173%3A0x5a27c478f0c40c23!2z44GE44Gh44GU5a6u5bSO5paw5a-M44K144OD44Kr44O85aC0!5e0!3m2!1sja!2sjp!4v1734569446095!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 鹿児島ユナイテッドFC -->
+			<div id="KagoshimaUnitedFC" class="Hidden">
+				<h4>鹿児島ユナイテッドFC</h4>
+				<p>白波スタジアム</p>
+				<a href="https://www.jleague-ticket.jp/club/ku/" target="_blank">Jリーグチケット</a>
+
+				<!-- 白波スタジアム -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.518217453348!2d130.55721987507124!3d31.56483414494494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e60cecf189265%3A0x4b535ad3ef9be35f!2z55m95rOi44K544K_44K444Ki44Og!5e0!3m2!1sja!2sjp!4v1734568690600!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
@@ -1152,6 +1155,7 @@
 		</div>
 	</section>
 
+	<!-- WEリーグ -->
 	<section id="WELeague">
 		<div id="WE" class="Hidden">
 			<h3>WEリーグ</h3>
@@ -1172,8 +1176,9 @@
 		</div>
 	</section>
 
-	<section id="WELeague_info">
-		<div id="WE_info">
+	<!-- WEリーグ クラブ -->
+	<section id="WELeague_Club">
+		<div id="WE_Club">
 			<!-- マイナビ仙台レディース -->
 			<div id="MynaviSendaiLadies" class="Hidden">
 				<h4>マイナビ仙台レディース</h4>
@@ -1206,7 +1211,7 @@
 			<div id="OmiyaArdijaVentus" class="Hidden">
 				<h4>大宮アルディージャVENTUS</h4>
 				<p>NACK5スタジアム大宮</p>
-				<a href="https://weleague-ticket.pia.jp/clubs/ardija.jsp" target="_blank">WEリーグチケット</a><br>
+				<a href="https://weleague-ticket.pia.jp/clubs/ardija.jsp" target="_blank">WEリーグチケット</a>
 
 				<!-- NACK5スタジアム大宮 -->
 				<iframe
@@ -1364,11 +1369,10 @@
 			<li><a href="#OrixBuffaloes" onclick="OrixBuffaloes()">オリックス・バファローズ</a></li>
 			<li><a href="#FukuokaSoftBankHawks" onclick="FukuokaSoftBankHawks()">福岡ソフトバンクホークス</a></li>
 		</div>
-
 	</section>
 
-	<section id="NPB_info">
-		<div id="CentralLeague_info">
+	<section id="NPB_Club">
+		<div id="CentralLeague_Club">
 			<!-- 読売ジャイアンツ -->
 			<div id="YomiuriGiants" class="Hidden">
 				<h4>読売ジャイアンツ</h4>
@@ -1401,7 +1405,7 @@
 			<div id="YokohamaDeNABaystars" class="Hidden">
 				<h4>横浜DeNaベイスターズ</h4>
 				<p>横浜スタジアム</p>
-				<a href="https://ticketsales.baystars.co.jp/" target="_blank">ベイチケ</a><br>
+				<a href="https://ticketsales.baystars.co.jp/" target="_blank">ベイチケ</a>
 
 				<!-- 横浜スタジアム -->
 				<iframe
@@ -1454,7 +1458,7 @@
 			</div>
 		</div>
 
-		<div id="PacificLeague_info">
+		<div id="PacificLeague_Club">
 			<!-- 北海道日本ハムファイターズ -->
 			<div id="HokkaidoNippon-HamFighters" class="Hidden">
 				<h4>北海道日本ハムファイターズ</h4>
@@ -1487,7 +1491,7 @@
 			<div id="SaitamaSeibuLions" class="Hidden">
 				<h4>埼玉西武ライオンズ</h4>
 				<p>ベルーナドーム</p>
-				<a href="https://ticket.seibulions.jp/" target="_blank">ライオンズチケット</a><br>
+				<a href="https://ticket.seibulions.jp/" target="_blank">ライオンズチケット</a>
 
 				<!-- ベルーナドーム -->
 				<iframe
@@ -1501,7 +1505,7 @@
 			<div id="ChibaLotteMarines" class="Hidden">
 				<h4>千葉ロッテマリーンズ</h4>
 				<p>ZOZOマリンスタジアム</p>
-				<a href="https://m-ticket.marines.co.jp/" target="_blank">Mチケット</a><br>
+				<a href="https://m-ticket.marines.co.jp/" target="_blank">Mチケット</a>
 
 				<!-- ZOZOマリンスタジアム -->
 				<iframe
@@ -1534,6 +1538,593 @@
 				<!-- みずほPayPayドーム福岡 -->
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.381731335116!2d130.35954827515693!3d33.59539864171573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541924d02e6b64b%3A0xb79cd978d2ed54c2!2z44G_44Ga44G7UGF5UGF544OJ44O844Og56aP5bKh!5e0!3m2!1sja!2sjp!4v1734587757287!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+		</div>
+	</section>
+
+	<section id="BLeague">
+		<div id="B1" class="Hidden">
+			<h3>B1リーグ</h3>
+			<li><a href="#LevangaHokkaido" onclick="LevangaHokkaido()">レバンガ北海道</a></li>
+			<li><a href="#Sendai89ERS" onclick="Sendai89ERS()">仙台89ERS</a></li>
+			<li><a href="#AkitaNorthernHappinets" onclick="AkitaNorthernHappinets()">秋田ノーザンハピネッツ</a></li>
+			<li><a href="#IbarakiRobots" onclick="IbarakiRobots()">茨城ロボッツ</a></li>
+			<li><a href="#UtsunomiyaBrex" onclick="UtsunomiyaBrex()">宇都宮ブレックス</a></li>
+			<li><a href="#GunmaCraneThunders" onclick="GunmaCraneThunders()">群馬クレインサンダーズ</a></li>
+			<li><a href="#KoshigayaAlphas" onclick="KoshigayaAlphas()">越谷アルファーズ</a></li>
+			<li><a href="#ChibaJets" onclick="ChibaJets()">千葉ジェッツ</a></li>
+			<li><a href="#AlvarkTokyo" onclick="YokohamaFMarinos()">アルバルク東京</a></li>
+			<li><a href="#SunrochersShibuya" onclick="SunrochersShibuya()">サンロッカーズ渋谷</a></li>
+			<li><a href="#KawasakiBraveThunders" onclick="KawasakiBraveThunders()">川崎ブレイブサンダース</a></li>
+			<li><a href="#YokohamaBCorsairs" onclick="YokohamaBCorsairs()">横浜ビー・コルセアーズ</a></li>
+			<li><a href="#SanenNeophoenix" onclick="SanenNeophoenix()">三遠ネオフェニックス</a></li>
+			<li><a href="#SeahorsesMikawa" onclick="SeahorsesMikawa()">シーホース三河</a></li>
+			<li><a href="#FightingEaglesNagoya" onclick="FightingEaglesNagoya()">ファイティングイーグルス名古屋</a></li>
+			<li><a href="#NagoyaDiamondDolphins" onclick="NagoyaDiamondDolphins()">名古屋ダイヤモンドドルフィンズ</a></li>
+			<li><a href="#ShigaLakes" onclick="ShigaLakes()">滋賀レイクス</a></li>
+			<li><a href="#KyotoHannaryz" onclick="KyotoHannaryz()">京都ハンナリーズ</a></li>
+			<li><a href="#OsakaEvessa" onclick="OsakaEvessa()">大阪エヴェッサ</a></li>
+			<li><a href="#ShimaneSusanooMagic" onclick="ShimaneSusanooMagic()">島根スサノオマジック</a></li>
+			<li><a href="#HiroshimaDragonFlies" onclick="HiroshimaDragonFlies()">広島ドラゴンフライズ</a></li>
+			<li><a href="#SagaBallooners" onclick="SagaBallooners()">佐賀バルーナーズ</a></li>
+			<li><a href="#NagasakiVelca" onclick="NagasakiVelca()">長崎ヴェルカ</a></li>
+			<li><a href="#RyukyuGoldenKings" onclick="RyukyuGoldenKings()">琉球ゴールデンキングス</a></li>
+		</div>
+
+		<div id="B2" class="Hidden">
+			<h3>B2リーグ</h3>
+			<li><a href="#AomoriWats" onclick="AomoriWats()">青森ワッツ</a></li>
+			<li><a href="#YamagataWyverns" onclick="YamagataWyverns()">山形ワイヴァンズ</a></li>
+			<li><a href="#FukushimaFirebonds" onclick="FukushimaFirebonds()">福島ファイヤーボンズ</a></li>
+			<li><a href="#AltiriChiba" onclick="AltiriChiba()">アルティーリ千葉</a></li>
+			<li><a href="#ToyamaGrouses" onclick="ToyamaGrouses()">富山グラウジーズ</a></li>
+			<li><a href="#FukuiBlowinds" onclick="FukuiBlowinds()">福井ブローウィンズ</a></li>
+			<li><a href="#ShinshuBraveWarriors" onclick="ShinshuBraveWarriors()">信州ブレイブウォリアーズ</a></li>
+			<li><a href="#VeltexShizuoka" onclick="VeltexShizuoka()">ベルテックス静岡</a></li>
+			<li><a href="#KobeStorks" onclick="KobeStorks()">神戸ストークス</a></li>
+			<li><a href="#BambitiousNara" onclick="BambitiousNara()">バンビシャス奈良</a></li>
+			<li><a href="#EhimeOrangeVikings" onclick="EhimeOrangeVikings()">愛媛オレンジバイキングス</a></li>
+			<li><a href="#RizingZephyrFukuoka" onclick="RizingZephyrFukuoka()">ライジングゼファー福岡</a></li>
+			<li><a href="#KumamotoVolters" onclick="KumamotoVolters()">熊本ヴォルターズ</a></li>
+			<li><a href="#KagoshimaRebnise" onclick="KagoshimaRebnise()">鹿児島レブナイズ</a></li>
+		</div>
+	</section>
+
+	<section id="BLeague_Club">
+		<div id="B1_Club">
+			<!-- レバンガ北海道 -->
+			<div id="LevangaHokkaido" class="Hidden">
+				<h4>レバンガ北海道</h4>
+				<p>北海きたえーる</p>
+				<a href="https://bleague-ticket.psrv.jp/games/LH" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 北海きたえーる -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.873819633968!2d141.37395107562347!3d43.044086291614036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2a33dbc943f3%3A0x505d4ad378b876d0!2z5YyX5rW36YGT56uL57eP5ZCI5L2T6IKy44K744Oz44K_44O8KOWMl-a1t-OBjeOBn-OBiOODvOOCiyk!5e0!3m2!1sja!2sjp!4v1736390419866!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 仙台89ERS -->
+			<div id="Sendai89ERS" class="Hidden">
+				<h4>仙台89ERS</h4>
+				<p>ゼビオアリーナ仙台</p>
+				<a href="https://bleague-ticket.psrv.jp/games/SE" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- ゼビオアリーナ仙台 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3134.116221372734!2d140.8846337110499!3d38.23041037175674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a27c97ad37937%3A0xf4ec0c8bc2b16f34!2z44K844OT44Kq44Ki44Oq44O844OK5LuZ5Y-w!5e0!3m2!1sja!2sjp!4v1736390604474!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 秋田ノーザンハピネッツ -->
+			<div id="AkitaNorthernHappinets" class="Hidden">
+				<h4>秋田ノーザンハピネッツ</h4>
+				<p>CNAアリーナ☆あきた</p>
+
+				<a href="https://bleague-ticket.psrv.jp/games/AN" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- CNAアリーナ☆あきた -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.621432290417!2d140.085215511131!3d39.72568967144045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8fc2d2db69e0e1%3A0x75c36de7d17a330b!2zQ05B44Ki44Oq44O844OK4piF44GC44GN44Gf77yI56eL55Sw5biC56uL5L2T6IKy6aSo77yJ!5e0!3m2!1sja!2sjp!4v1736390705657!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 茨城ロボッツ -->
+			<div id="IbarakiRobots" class="Hidden">
+				<h4>茨城ロボッツ</h4>
+				<p>アダストリアみとアリーナ</p>
+				<a href="https://bleague-ticket.psrv.jp/games/IR" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- アダストリアみとアリーナ -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.192525890924!2d140.44612051095325!3d36.380333072254594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60222414de6c055d%3A0xf2564caa8c9b950a!2z44Ki44OA44K544OI44Oq44Ki44G_44Go44Ki44Oq44O844OK!5e0!3m2!1sja!2sjp!4v1736390776154!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 宇都宮ブレックス -->
+			<div id="UtsunomiyaBrex" class="Hidden">
+				<h4>宇都宮ブレックス</h4>
+				<p>ブレックスアリーナ宇都宮</p>
+				<a href="https://bleague-ticket.psrv.jp/games/UB" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- ブレックスアリーナ宇都宮 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.705889031692!2d139.90811061096247!3d36.56120387220081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f676eb5fd6b09%3A0x1492e071443e9119!2z44OW44Os44OD44Kv44K544Ki44Oq44O844OK5a6H6YO95a6u!5e0!3m2!1sja!2sjp!4v1736390892293!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 群馬クレインサンダーズ -->
+			<div id="GunmaCraneThunders" class="Hidden">
+				<h4>群馬クレインサンダーズ</h4>
+				<p>オープンハウスアリーナ太田</p>
+				<a href="https://bleague-ticket.psrv.jp/games/GC" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- オープンハウスアリーナ太田 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3216.490214446559!2d139.39190991094782!3d36.27615367228612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f218987e56ed3%3A0xbb38b820b75548c!2zT1BFTiBIT1VTRSBBUkVOQSBPVEHvvIjlpKrnlLDluILnt4_lkIjkvZPogrLppKjvvIk!5e0!3m2!1sja!2sjp!4v1736390973628!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 越谷アルファーズ -->
+			<div id="KoshigayaAlphas" class="Hidden">
+				<h4>越谷アルファーズ</h4>
+				<p>越谷市総合体育館</p>
+				<a href="https://bleague-ticket.psrv.jp/games/KA" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 越谷市総合体育館 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.813407267489!2d139.81128451092897!3d35.90258537240203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018964b5350480b%3A0xa049b4ac46673c3c!2z6LaK6LC35biC56uL57eP5ZCI5L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1736391042878!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 千葉ジェッツ -->
+			<div id="ChibaJets" class="Hidden">
+				<h4>千葉ジェッツ</h4>
+				<p>LaLa arena TOKYO-BAY</p>
+				<a href="https://bleague-ticket.psrv.jp/games/CJ" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- LaLa arena TOKYO-BAY -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7372073828333!2d139.9870776609178!3d35.683472222472204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60187ff714cb1e67%3A0xadef695d04aff1d1!2sLaLa%20arena%20TOKYO-BAY!5e0!3m2!1sja!2sjp!4v1736391159119!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- アルバルク東京 -->
+			<div id="AlvarkTokyo" class="Hidden">
+				<h4>アルバルク東京</h4>
+				<p>国立代々木競技場 第一体育館</p>
+				<a href="https://bleague-ticket.psrv.jp/games/AT" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 国立代々木競技場 第一体育館 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.379879095867!2d139.69756551091714!3d35.667647172477224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cafea3fe4c5%3A0x6e74f313e8ed1b7b!2z5Zu956uL5Luj44CF5pyo56u25oqA5aC0IOesrOS4gOS9k-iCsumkqA!5e0!3m2!1sja!2sjp!4v1736391271373!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- サンロッカーズ渋谷 -->
+			<div id="SunrochersShibuya" class="Hidden">
+				<h4>サンロッカーズ渋谷</h4>
+				<p>青山学院記念館</p>
+				<a href="https://bleague-ticket.psrv.jp/games/SR" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 青山学院記念館 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.600778514425!2d139.7078961109168!3d35.662206372479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5fc6630343%3A0x9df87450d4a92375!2z6Z2S5bGx5a2m6Zmi6KiY5b-16aSo!5e0!3m2!1sja!2sjp!4v1736391360001!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 川崎ブレイブサンダース -->
+			<div id="KawasakiBraveThunders" class="Hidden">
+				<h4>川崎ブレイブサンダース</h4>
+				<p>川崎市とどろきアリーナ</p>
+				<a href="https://bleague-ticket.psrv.jp/games/KB" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 川崎市とどろきアリーナ -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.6297826834457!2d139.64478501091318!3d35.58752857250342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f5a12c5a34a5%3A0x8c063214fbf1040e!2z5bed5bSO5biC44Go44Gp44KN44GN44Ki44Oq44O844OK!5e0!3m2!1sja!2sjp!4v1736391439125!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 横浜ビー・コルセアーズ -->
+			<div id="YokohamaBCorsairs" class="Hidden">
+				<h4>横浜ビー・コルセアーズ</h4>
+				<p>横浜国際プール</p>
+				<a href="https://bleague-ticket.psrv.jp/games/YB" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 横浜国際プール -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.577730958321!2d139.5918812109119!3d35.56412967251105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f66c80d91b1b%3A0x3c2f95216fe74bb3!2z5qiq5rWc5Zu96Zqb44OX44O844Or!5e0!3m2!1sja!2sjp!4v1736391537772!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 三遠ネオフェニックス -->
+			<div id="SanenNeophoenix" class="Hidden">
+				<h4>三遠ネオフェニックス</h4>
+				<p>豊橋市総合体育館</p>
+				<a href="https://bleague-ticket.psrv.jp/games/SN" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 豊橋市総合体育館 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.9039348692068!2d137.3223071108718!3d34.758012672786336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004cfc910267305%3A0x8b530900ddf80d65!2z6LGK5qmL5biC57eP5ZCI5L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1736391626184!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- シーホース三河 -->
+			<div id="SeahorsesMikawa" class="Hidden">
+				<h4>シーホース三河</h4>
+				<p>ウィングアリーナ刈谷</p>
+				<a href="https://bleague-ticket.psrv.jp/games/SM" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- ウィングアリーナ刈谷 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.494389134402!2d137.00843141088475!3d35.01935987269478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60049d0d760f2fed%3A0xf64521fb9c7a4f9e!2z44Km44Kj44Oz44Kw44Ki44Oq44O844OK5YiI6LC3IOODoeOCpOODs-OCouODquODvOODig!5e0!3m2!1sja!2sjp!4v1736391690198!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- ファイティングイーグルス名古屋 -->
+			<div id="FightingEaglesNagoya" class="Hidden">
+				<h4>ファイティングイーグルス名古屋</h4>
+				<p>名古屋市枇杷島スポーツセンター</p>
+				<a href="https://bleague-ticket.psrv.jp/games/FE" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 名古屋市枇杷島スポーツセンター -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.7086202041523!2d136.8724600108931!3d35.18881427263649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003769ae0cb782d%3A0x808ba2834218ed26!2z5p6H5p235bO244K544Od44O844OE44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1736391784876!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 名古屋ダイヤモンドドルフィンズ -->
+			<div id="NagoyaDiamondDolphins" class="Hidden">
+				<h4>名古屋ダイヤモンドドルフィンズ</h4>
+				<p>ドルフィンズアリーナ</p>
+				<a href="https://bleague-ticket.psrv.jp/games/DD" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- ドルフィンズアリーナ -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.9372351808433!2d136.90002291089286!3d35.18311687263852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376cd2bdb702f%3A0x35c90a62f47bc62f!2z44OJ44Or44OV44Kj44Oz44K644Ki44Oq44O844OK77yI5oSb55-l55yM5L2T6IKy6aSo77yJ!5e0!3m2!1sja!2sjp!4v1736391880850!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 滋賀レイクス -->
+			<div id="ShigaLakes" class="Hidden">
+				<h4>滋賀レイクス</h4>
+				<p>滋賀ダイハツアリーナ</p>
+				<a href="https://bleague-ticket.psrv.jp/games/LS" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 滋賀ダイハツアリーナ -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.449112928!2d135.94839791088233!3d34.970413672711715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60016d4db23cccd1%3A0x4fd82fd93226d591!2z5ruL6LOA44OA44Kk44OP44OE44Ki44Oq44O844OK!5e0!3m2!1sja!2sjp!4v1736391934825!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 京都ハンナリーズ -->
+			<div id="KyotoHannaryz" class="Hidden">
+				<h4>京都ハンナリーズ</h4>
+				<p>かたおかアリーナ京都</p>
+				<a href="https://bleague-ticket.psrv.jp/games/KH" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- かたおかアリーナ京都 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.4523205995347!2d135.71248281088353!3d34.995380772703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600106554c6a2d9d%3A0x723303e0d698a5ca!2z44GL44Gf44GK44GL44Ki44Oq44O844OK5Lqs6YO9!5e0!3m2!1sja!2sjp!4v1736391989842!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 大阪エヴェッサ -->
+			<div id="OsakaEvessa" class="Hidden">
+				<h4>大阪エヴェッサ</h4>
+				<p>おおきにアリーナ舞洲</p>
+				<a href="https://bleague-ticket.psrv.jp/games/OE" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- おおきにアリーナ舞洲 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.5717443916815!2d135.39505961086726!3d34.66551687281928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e9ec464f8cd5%3A0x9fc1f178fdb2fbd4!2z44GK44GK44GN44Gr44Ki44Oq44O844OK6Iie5rSy!5e0!3m2!1sja!2sjp!4v1736392051265!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 島根スサノオマジック -->
+			<div id="ShimaneSusanooMagic" class="Hidden">
+				<h4>島根スサノオマジック</h4>
+				<p>松江市総合体育館</p>
+				<a href="https://bleague-ticket.psrv.jp/games/SS" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 松江市総合体育館 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.335512238464!2d133.06319291090708!3d35.471241772541696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355704f87cf75fdf%3A0x83c61aa1bd660812!2z5p2-5rGf5biC57eP5ZCI5L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1736392119138!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 広島ドラゴンフライズ -->
+			<div id="HiroshimaDragonFlies" class="Hidden">
+				<h4>広島ドラゴンフライズ</h4>
+				<p>広島サンプラザホール</p>
+				<a href="https://bleague-ticket.psrv.jp/games/HD" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 広島サンプラザホール -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3293.2184403184283!2d132.3920255108528!3d34.370364072926414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa32a58e89039%3A0x8d9e3ef82ef1c5bc!2z5bqD5bO244K144Oz44OX44Op44K244Ob44O844Or!5e0!3m2!1sja!2sjp!4v1736392175209!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 佐賀バルーナーズ -->
+			<div id="SagaBallooners" class="Hidden">
+				<h4>佐賀バルーナーズ</h4>
+				<p>SAGAアリーナ</p>
+				<a href="https://bleague-ticket.psrv.jp/games/SG" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- SAGAアリーナ -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.6773156353433!2d130.28974451080026!3d33.2749391733488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541cb95fbbbf861%3A0x58c2cb7b4cec6e35!2zU0FHQeOCouODquODvOODig!5e0!3m2!1sja!2sjp!4v1736392242379!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 長崎ヴェルカ -->
+			<div id="NagasakiVelca" class="Hidden">
+				<h4>長崎ヴェルカ</h4>
+				<p>長崎県総合体育館</p>
+				<a href="https://bleague-ticket.psrv.jp/games/NV" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 長崎県総合体育館 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.488533683766!2d129.852383710777!3d32.779303423552754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356aad288c6ee495%3A0xa88c0457f8f12645!2z6ZW35bSO55yM56uL57eP5ZCI5L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1736392299626!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 琉球ゴールデンキングス -->
+			<div id="RyukyuGoldenKings" class="Hidden">
+				<h4>琉球ゴールデンキングス</h4>
+				<p>沖縄アリーナ</p>
+				<a href="https://bleague-ticket.psrv.jp/games/RG" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 沖縄アリーナ -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.8007435804066!2d127.78065231050284!3d26.33295087690149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5136919000377%3A0xd4372a4e75a85cd4!2z5rKW57iE44Ki44Oq44O844OK!5e0!3m2!1sja!2sjp!4v1736392362490!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+		</div>
+
+		<div id="B2_Club">
+			<!-- 青森ワッツ -->
+			<div id="AomoriWats" class="Hidden">
+				<h4>青森ワッツ</h4>
+				<p>カクヒログループスーパーアリーナ(青森市総合体育館)</p>
+				<a href="https://bleague-ticket.psrv.jp/games/AW" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- カクヒログループスーパーアリーナ(青森市総合体育館) -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.6375148551906!2d140.74333601119167!3d40.813958671259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b9f006e20331d%3A0x6573c3043672a493!2z6Z2S5qOu5biC57eP5ZCI5L2T6IKy6aSo77yI44Kr44Kv44OS44Ot44Kw44Or44O844OX44K544O844OR44O844Ki44Oq44O844OK77yJ!5e0!3m2!1sja!2sjp!4v1736392554685!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 山形ワイヴァンズ -->
+			<div id="YamagataWyverns" class="Hidden">
+				<h4>山形ワイヴァンズ</h4>
+				<p>山形県総合運動公園</p>
+				<a href="https://bleague-ticket.psrv.jp/games/YW" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 山形県総合運動公園 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.544314355874!2d140.37460111105554!3d38.33638197173183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8bc5f52dbd0fc1%3A0xeb014bdc5163d686!2z5bGx5b2i55yM57eP5ZCI6YGL5YuV5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1736392659829!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 福島ファイヤーボンズ -->
+			<div id="FukushimaFirebonds" class="Hidden">
+				<h4>福島ファイヤーボンズ</h4>
+				<p>宝来屋郡山総合体育館</p>
+				<a href="https://bleague-ticket.psrv.jp/games/FF" target="_blank">B.LEAGUEチケット</a>
+
+				<!--宝来屋郡山総合体育館-->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6799293298736!2d140.36135641100583!3d37.39740097196642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60206cbeabc02bf7%3A0x7d2c2a95887af51b!2z5a6d5p2l5bGLIOmDoeWxsee3j-WQiOS9k-iCsumkqA!5e0!3m2!1sja!2sjp!4v1736392720301!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- アルティーリ千葉 -->
+			<div id="AltiriChiba" class="Hidden">
+				<h4>アルティーリ千葉</h4>
+				<p>千葉ポートアリーナ</p>
+				<a href="https://bleague-ticket.psrv.jp/games/AC" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 千葉ポートアリーナ -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.0039649928794!2d140.1092179109138!3d35.60296877249838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602284b2ace170b1%3A0xba5505a776aa7765!2z5Y2D6JGJ44Od44O844OI44Ki44Oq44O844OK!5e0!3m2!1sja!2sjp!4v1736392776610!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 富山グラウジーズ -->
+			<div id="ToyamaGrouses" class="Hidden">
+				<h4>富山グラウジーズ</h4>
+				<p>富山市総合体育館</p>
+				<a href="https://bleague-ticket.psrv.jp/games/TG" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 富山市総合体育館 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.6583215368!2d137.21139841096996!3d36.70674767215824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff79a7523b2e2cb%3A0x3eebf6a91624f068!2z5a-M5bGx5biC57eP5ZCI5L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1736392881163!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 福井ブローウィンズ -->
+			<div id="FukuiBlowinds" class="Hidden">
+				<h4>福井ブローウィンズ</h4>
+				<p>セーレン・ドリームアリーナ(福井県営体育館)</p>
+				<a href="https://bleague-ticket.psrv.jp/games/FB" target="_blank">パルチケB.LEAGUEチケット</a>
+
+				<!-- セーレン・ドリームアリーナ(福井県営体育館) -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3225.6311439023157!2d136.17942091093667!3d36.0537069723545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8b92de8585b0b%3A0xd252be325bac0470!2z56aP5LqV55yM5Za25L2T6IKy6aSo77yI44K744O844Os44Oz44O744OJ44Oq44O844Og44Ki44Oq44O844OK77yJ!5e0!3m2!1sja!2sjp!4v1736392999372!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 信州ブレイブウォリアーズ -->
+			<div id="ShinshuBraveWarriors" class="Hidden">
+				<h4>信州ブレイブウォリアーズ</h4>
+				<p>ホワイトリング</p>
+				<a href="https://bleague-ticket.psrv.jp/games/BW" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- ホワイトリング -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.8976183989025!2d138.20368951096475!3d36.604774772187966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601d85aee8e8df0b%3A0x5b4689b74cc0b3c0!2z6ZW36YeO5biC55yf5bO257eP5ZCI44K544Od44O844OE44Ki44Oq44O844OK77yI44Ob44Ov44Kk44OI44Oq44Oz44Kw77yJ!5e0!3m2!1sja!2sjp!4v1736393078453!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- ベルテックス静岡 -->
+			<div id="VeltexShizuoka" class="Hidden">
+				<h4>ベルテックス静岡</h4>
+				<p>静岡市中央体育館</p>
+				<a href="https://bleague-ticket.psrv.jp/games/VS" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 静岡市中央体育館 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.0029724812407!2d138.38243321088274!3d34.98159027270784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a4a1a3687e5eb%3A0xbb8383e41acd9295!2z6Z2Z5bKh5biC5Lit5aSu5L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1736393131068!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 神戸ストークス -->
+			<div id="KobeStorks" class="Hidden">
+				<h4>神戸ストークス</h4>
+				<p>ワールド記念ホール</p>
+				<a href="https://bleague-ticket.psrv.jp/games/NS" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- ワールド記念ホール -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.6373886251768!2d135.20798871086728!3d34.66385947281987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008e198ad96bb5%3A0xe10fe0b26b21fb8!2z44Ov44O844Or44OJ6KiY5b-144Ob44O844Or!5e0!3m2!1sja!2sjp!4v1736393187548!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- バンビシャス奈良 -->
+			<div id="BambitiousNara" class="Hidden">
+				<h4>バンビシャス奈良</h4>
+				<p>ロートアリーナ奈良</p>
+				<a href="https://bleague-ticket.psrv.jp/games/BN" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- ロートアリーナ奈良 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3817928057465!2d135.82554421086886!3d34.69554902280857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001397e02234e1d%3A0x7e74a823199e8768!2z44Ot44O844OI44Ki44Oq44O844OK5aWI6Imv!5e0!3m2!1sja!2sjp!4v1736393249423!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 愛媛オレンジバイキングス -->
+			<div id="EhimeOrangeVikings" class="Hidden">
+				<h4>愛媛オレンジバイキングス</h4>
+				<p>松山市総合コミュニティセンター</p>
+				<a href="https://bleague-ticket.psrv.jp/games/EO" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 松山市総合コミュニティセンター -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d782.0198601729797!2d132.75435175029097!3d33.835925054654574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354fe5879512c0dd%3A0xb65dc7f45846a36a!2z5p2-5bGx5biC57eP5ZCI44Kz44Of44Ol44OL44OG44Kj44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1736393364285!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- ライジングゼファー福岡 -->
+			<div id="RizingZephyrFukuoka" class="Hidden">
+				<h4>ライジングゼファー福岡</h4>
+				<p>照葉積水ハウスアリーナ</p>
+				<a href="https://bleague-ticket.psrv.jp/games/RF" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 照葉積水ハウスアリーナ -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.595789820678!2d130.41508851081895!3d33.66763397319285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35418ec30b5131ef%3A0xa3b283d122ee056c!2z54Wn6JGJ56mN5rC044OP44Km44K544Ki44Oq44O844OK77yI56aP5bKh5biC57eP5ZCI5L2T6IKy6aSo77yJ!5e0!3m2!1sja!2sjp!4v1736393445136!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 熊本ヴォルターズ -->
+			<div id="KumamotoVolters" class="Hidden">
+				<h4>熊本ヴォルターズ</h4>
+				<p>熊本県立総合体育館</p>
+				<a href="https://bleague-ticket.psrv.jp/games/KV" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 熊本県立総合体育館 -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.1684819203438!2d130.69920841077854!3d32.81430057353817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f41a3437598f%3A0x6ffad4b099ef517a!2z54aK5pys55yM56uL57eP5ZCI5L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1736393498566!5m2!1sja!2sjp"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
+
+			<!-- 鹿児島レブナイズ -->
+			<div id="KagoshimaRebnise" class="Hidden">
+				<h4>鹿児島レブナイズ</h4>
+				<p>西原商会アリーナ(鹿児島アリーナ)</p>
+				<a href="https://bleague-ticket.psrv.jp/games/RK" target="_blank">B.LEAGUEチケット</a>
+
+				<!-- 西原商会アリーナ(鹿児島アリーナ) -->
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.184449107251!2d130.53280231072284!3d31.601405274069304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e5df45d7aea33%3A0xd9e8cc2f42d2a980!2z6KW_5Y6f5ZWG5Lya44Ki44Oq44O844OK77yI6bm_5YWQ5bO244Ki44Oq44O844OK77yJ!5e0!3m2!1sja!2sjp!4v1736393552583!5m2!1sja!2sjp"
 					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>

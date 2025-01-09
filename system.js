@@ -15,20 +15,34 @@ function input() {
 
 /* スタジアム名を取得 */
 function Stadium_Name() {
-	var Clubname = $(".Selection").attr("id");
+	var Clubname = $(".SelectClub").attr("id");
 
-	if ($(".Selected").length)
-		var Stadium = $("p.Selected").text();
+	if ($(".SelectStadium").length)
+		var Stadium = $("p.SelectStadium").text();
 	else
 		var Stadium = $("#" + Clubname + " p").text();
 
 	return Stadium;
 }
 
-/* 削除 */
-function remove() {
-	$(".Selection").removeClass("Selection");
-	$(".Selected").removeClass("Selected");
+/* クリア */
+function Clear() {
+	$(".SelectClub").hide();
+	$(".SelectStadium").hide();
+
+	$(".SelectClub").removeClass("SelectClub");
+	$(".SelectStadium").removeClass("SelectStadium");
 	$("#Location").val("");
 	$("#Route").hide();
+
+	$("#J1").hide();
+	$("#J2").hide();
+	$("#J3").hide();
+	$("NationalStadium").hide();
+
+	$("#CentralLeague").hide();
+	$("#PacificLeague").hide();
+
+	$("#B1").hide();
+	$("#B2").hide();
 }

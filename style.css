@@ -58,7 +58,9 @@ iframe {
 #NationalStadium,
 #WE,
 #CentralLeague,
-#PacificLeague {
+#PacificLeague,
+#B1,
+#B2 {
 	list-style-type: none;
 	padding-left: 10px;
 	padding: 1em;

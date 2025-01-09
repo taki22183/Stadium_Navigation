@@ -1,10 +1,12 @@
 /* 日本プロ野球 */
 function NPB() {
-	$("h2").css("background-color", "white").css("color", "black");
+	Clear();
+
+	$("h2").css("background-color", "#FFFFFF").css("color", "#000000");
 	$("#JLeague div").hide();
 	$("#input_Location").hide();
 	$("#Route").hide();
-	$(".Selection" || ".Selected").hide();
+	$(".SelectClub" || ".SelectStadium").hide();
 	$("#WE").hide();
 	$("#CentralLeague").show();
 	$("#PacificLeague").show();
@@ -12,92 +14,96 @@ function NPB() {
 
 /* セ・リーグ */
 function CentralLeague_show() {
-	$("h2").css("background-color", "").css("color", "");
+	Clear();
+
+	$("h2").css("background-color", "#FFFFFF").css("color", "#000000");
 	$("#NPB div").hide();
 	$("#input_Location").hide();
 	$("#Route").hide();
-	$(".Selection" || ".Selected").hide();
+	$(".SelectClub" || ".SelectStadium").hide();
 	$("#WE").hide();
 	$("#CentralLeague").show();
 }
 
 /* 読売ジャイアンツ */
 function YomiuriGiants() {
-	remove();
+	Clear();
 
-	$("h2").css("background-color", "black").css("color", "#F89828");
-	$("#CentralLeague").hide();
+	$("h2").css("background-color", "#000000").css("color", "#F89828");
+
 	$("#YomiuriGiants").show();
 	$("#input_Location").show();
 
-	$("#YomiuriGiants").addClass("Selection");
+	$("#YomiuriGiants").addClass("SelectClub");
 }
 
 /* 東京ヤクルトスワローズ */
 function TokyoYakultSwallows() {
-	remove();
+	Clear();
 
 	$("h2").css("background-color", "#073190").css("color", "#E6002D");
-	$("#CentralLeague").hide();
+
 	$("#TokyoYakultSwallows").show();
 	$("#input_Location").show();
 
-	$("#TokyoYakultSwallows").addClass("Selection");
+	$("#TokyoYakultSwallows").addClass("SelectClub");
 }
 
 /* 横浜DeNaベイスターズ */
 function YokohamaDeNABaystars() {
-	remove();
+	Clear();
 
-	$("h2").css("background-color", "#014799").css("color", "white");
-	$("#CentralLeague").hide();
+	$("h2").css("background-color", "#014799").css("color", "#FFFFFF");
+
 	$("#YokohamaDeNABaystars").show();
 	$("#input_Location").show();
 
-	$("#YokohamaDeNABaystars").addClass("Selection");
+	$("#YokohamaDeNABaystars").addClass("SelectClub");
 }
 
 /* 中日ドラゴンズ */
 function ChunichiDragons() {
-	remove();
+	Clear();
 
-	$("h2").css("background-color", "#00418E").css("color", "white");
-	$("#CentralLeague").hide();
+	$("h2").css("background-color", "#00418E").css("color", "#FFFFFF");
+
 	$("#ChunichiDragons").show();
 	$("#input_Location").show();
 
-	$("#ChunichiDragons").addClass("Selection");
+	$("#ChunichiDragons").addClass("SelectClub");
 }
 
 /* 阪神タイガース */
 function HanshinTigers() {
-	remove();
+	Clear();
 
-	$("h2").css("background-color", "#FADC00").css("color", "black");
-	$("#CentralLeague").hide();
+	$("h2").css("background-color", "#FADC00").css("color", "#000000");
+
 	$("#HanshinTigers").show();
 	$("#input_Location").show();
 
-	$("#HanshinTigers").addClass("Selection");
+	$("#HanshinTigers").addClass("SelectClub");
 }
 
 /* 広島東洋カープ */
 function HiroshimaToyoCarp() {
-	remove();
+	Clear();
 
-	$("h2").css("background-color", "#EB0021").css("color", "white");
-	$("#CentralLeague").hide();
+	$("h2").css("background-color", "#EB0021").css("color", "#FFFFFF");
+
 	$("#HiroshimaToyoCarp").show();
 	$("#input_Location").show();
 
-	$("#HiroshimaToyoCarp").addClass("Selection");
+	$("#HiroshimaToyoCarp").addClass("SelectClub");
 }
 
 /* パ・リーグ */
 function PacificLeague_show() {
-	$("h2").css("background-color", "white").css("color", "black");
+	Clear();
+
+	$("h2").css("background-color", "#FFFFFF").css("color", "#000000");
 	$("#NPB div").hide();
-	$(".Selection" || ".Selected").hide();
+	$(".SelectClub" || ".SelectStadium").hide();
 	$("#input_Location").hide();
 	$("#Route").hide();
 	$("#WE").hide();
@@ -106,74 +112,72 @@ function PacificLeague_show() {
 
 /* 北海道日本ハムファイターズ */
 function HokkaidoNipponHamFighters() {
-	remove();
+	Clear();
 
-	$("h2").css("background-color", "#006298").css("color", "white");
-	$("#PacificLeague").hide();
+	$("h2").css("background-color", "#006298").css("color", "#FFFFFF");
+
 	$("#HokkaidoNippon-HamFighters").show();
 	$("#input_Location").show();
 
-	$("#HokkaidoNippon-HamFighters").addClass("Selection");
+	$("#HokkaidoNippon-HamFighters").addClass("SelectClub");
 }
 
 /* 東北楽天ゴールデンイーグルス */
 function TohokuRakutenGoldenEagles() {
-	remove();
+	Clear();
 
 	$("h2").css("background-color", "#870011").css("color", "#F7AB00");
-	$("#PacificLeague").hide();
+
 	$("#TohokuRakutenGoldenEagles").show();
 	$("#input_Location").show();
 
-	$("#TohokuRakutenGoldenEagles").addClass("Selection");
-
+	$("#TohokuRakutenGoldenEagles").addClass("SelectClub");
 }
 
 /* 埼玉西武ライオンズ */
 function SaitamaSeibuLions() {
-	remove();
+	Clear();
 
-	$("h2").css("background-color", "#001E40").css("color", "white");
-	$("#PacificLeague").hide();
+	$("h2").css("background-color", "#001E40").css("color", "#FFFFFF");
+
 	$("#SaitamaSeibuLions").show();
 	$("#input_Location").show();
 
-	$("#SaitamaSeibuLions").addClass("Selection");
-
+	$("#SaitamaSeibuLions").addClass("SelectClub");
 }
 
 /* 千葉ロッテマリーンズ */
 function ChibaLotteMarines() {
-	remove();
+	Clear();
 
-	$("h2").css("background-color", "black").css("color", "white");
-	$("#PacificLeague").hide();
+	$("h2").css("background-color", "#000000").css("color", "#FFFFFF");
+
 	$("#ChibaLotteMarines").show();
 	$("#input_Location").show();
 
-	$("#ChibaLotteMarines").addClass("Selection");
+	$("#ChibaLotteMarines").addClass("SelectClub");
 }
 
 /* オリックス・バファローズ */
 function OrixBuffaloes() {
-	remove();
+	Clear();
 
 	$("h2").css("background-color", "#000121").css("color", "#B8A536");
-	$("#PacificLeague").hide();
+
 	$("#OrixBuffaloes").show();
 	$("#input_Location").show();
 
-	$("#OrixBuffaloes").addClass("Selection");
+	$("#OrixBuffaloes").addClass("SelectClub");
 }
 
 /* 福岡ソフトバンクホークス */
 function FukuokaSoftBankHawks() {
-	remove();
+	Clear();
 
-	$("h2").css("background-color", "#FFCC00").css("color", "black");
-	$("#PacificLeague").hide();
+	$("h2").css("background-color", "#FFCC00").css("color", "#000000");
+
 	$("#FukuokaSoftBankHawks").show();
 	$("#input_Location").show();
 
-	$("#FukuokaSoftBankHawks").addClass("Selection");
+	$("#FukuokaSoftBankHawks").addClass("SelectClub");
 }
