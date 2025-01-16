@@ -1,6 +1,7 @@
 /* htmlの要素 */
 html {
 	height: 100%;
+	background-color: #FFFBF8;
 }
 
 body {
@@ -14,6 +15,7 @@ h2 {
 	color: black;
 	padding: 10px;
 	margin: 0;
+	background-color: #ffffff;
 }
 
 header>a {
@@ -87,13 +89,25 @@ nav {
 	text-decoration: none;
 }
 
+.Sports:hover {
+	background-color: #000;
+}
+
+.Sports {
+	width: 130px;
+}
+
 .League {
 	display: none;
 	position: absolute;
 	background-color: beige;
-	width: 112px;
+	width: 130px;
 	list-style-type: none;
 	padding-left: 0;
+}
+
+.League li>a:hover {
+	background-color: #DCDCC8;
 }
 
 .League>li a {
@@ -101,6 +115,7 @@ nav {
 }
 
 .Sports:hover .League {
+	background-color: #EBEBC8;
 	display: block;
 }
 
